@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Candidature | Emir Kocaturk</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Styles spécifiques pour l'alignement central */
+        .central-container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        .pdf-viewer {
+            width: 100%;
+            height: 800px; /* Augmenté pour une meilleure lecture au centre */
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">EMIR KOCATURK</div>
+        <ul>
+            <li><a href="index.html">Accueil 🏠</a></li>
+            <li><a href="projets.html">Réalisations (SAÉ) 🛠</a></li>
+            <li><a href="cv.html" class="active">Candidature 📝</a></li>
+        </ul>
+    </nav>
+
+    <header id="hero-pro">
+        <div class="hero-container">
+            <div class="header-content">
+                <div class="badge-iut">Documents Professionnels</div>
+                <h1>Mon Curriculum Vitae</h1>
+                <p>Découvrez mon parcours et mes compétences en GEII.</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="container">
+        <div class="central-container">
+            
+            <div class="skill-category">
+                <h2 class="section-title" style="text-align: center; margin-bottom: 17px;">
+                    <i class="fas fa-user-tie"></i> Curriculum Vitae
+                </h2>
+                <div class="pdf-viewer">
+                    <embed src="fichiers/cv.pdf" type="application/pdf" width="100%" height="100%" />
+                </div>
+                <p style="text-align: center; margin-top: 15px;">
+                    <a href="fichiers/cv.pdf" target="_blank" class="soft-tag" style="background:#2c3e50; color:white; text-decoration:none; display: inline-block;">
+                        <i class="fas fa-download"></i> Télécharger le PDF
+                    </a>
+                </p>
+            </div>
+
+	 <div class="central-container">
+            
+            <div class="skill-category">
+                <h2 class="section-title" style="text-align: center; margin-bottom: 23px;">
+                    <i class="fas fa-user-tie"></i> Lettre de Motivation
+                </h2>
+                <div class="pdf-viewer">
+                    <embed src="fichiers/LM.pdf" type="application/pdf" width="100%" height="100%" />
+                </div>
+                <p style="text-align: center; margin-top: 15px;">
+                    <a href="fichiers/LM.pdf" target="_blank" class="soft-tag" style="background:#2c3e50; color:white; text-decoration:none; display: inline-block;">
+                        <i class="fas fa-download"></i> Télécharger le PDF
+                    </a>
+                </p>
+            </div>
+
+            <div class="skill-category">
+                <h3><i class="fas fa-search-location"></i> Recherche de Stage</h3>
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 20px;">
+                    <div>
+                        <p><strong>Période :</strong> Janvier 2027 (8 semaines)</p>
+                        <p><strong>Domaines :</strong> Automatisme, Électronique, Énergie.</p>
+                        <p><strong>Mobilité :</strong> Ile de France / Aube</p>
+                    </div>
+                    <div class="software-tags">
+                        <a href="https://www.linkedin.com/in/emir-kocaturk-189406390/" target="_blank" class="soft-tag" style="background:#0077b5; color:white; text-decoration:none;">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3><i class="fas fa-paper-plane"></i> Me contacter directement</h3>
+                <form style="display: grid; gap: 12px; margin-top: 15px;">
+                    <div style="display: flex; gap: 10px;">
+                        <input type="text" placeholder="Nom complet" required style="flex: 1; padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
+                        <input type="email" placeholder="Votre adresse email" required style="flex: 1; padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
+                    </div>
+                    <input type="text" placeholder="Objet de votre message" style="padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
+                    <textarea placeholder="Votre message..." rows="5" required style="padding: 10px; border-radius: 5px; border: 1px solid #ddd; resize: vertical;"></textarea>
+                    <button type="submit" class="soft-tag" style="background:#2c3e50; color:white; border:none; cursor:pointer; padding: 12px; font-weight: bold; width: fit-content;">
+                        <i class="fas fa-paper-plane"></i> Envoyer le message
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+</body>
+</html>

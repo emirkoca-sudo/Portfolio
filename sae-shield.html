@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Shield Arduino Nano | Emir Kocaturk</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="index.html" style="color: white; text-decoration: none;">
+                <i class="fas fa-home"></i> EMIR KOCATURK
+            </a>
+        </div>
+        <ul>
+            <li><a href="index.html">Accueil 🏠</a></li>
+            <li><a href="projets.html">Réalisations (SAÉ) 🛠</a></li>
+			<li><a href="cv.html">Ma Candidature 📝</a></li>
+        </ul>
+    </nav>
+
+    <div class="container sae-detail">
+        <header class="sae-header-pro" style="text-align: center; margin-bottom: 40px;">
+            <a href="projets.html" class="back-link"><i class="fas fa-arrow-left"></i> Retour aux projets</a>
+            <h1 style="color: #003366; font-size: 2.5rem; margin-top: 10px;">Shield Arduino Nano ⚡</h1>
+            <div style="height: 4px; width: 80px; background: #c5a059; margin: 15px auto;"></div>
+        </header>
+
+        <section class="info-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 25px; border-top: 5px solid #003366;">
+            <h2><i class="fas fa-bullseye"></i> Objectif du projet 🎯</h2>
+            <p>Réaliser une carte d'interface polyvalente (Shield) permettant de connecter et de tester divers capteurs et actionneurs sur un microcontrôleur Arduino Nano. Ce projet visait à maîtriser les bases de la fabrication électronique et de la programmation embarquée.</p>
+            <p>La fabrication de ce shield a été l'occasion de mettre en pratique des gestes techniques précis pour valider les compétences suivantes :</p>
+            <p style="background: #f0f7ff; padding: 15px; border-left: 4px solid #c5a059;">
+                <strong>AC11.02 | Réalisation de prototypes :</strong> J'ai développé cette compétence par le montage et la <strong>soudure manuelle</strong> 💡 des composants sur le circuit, en veillant à la précision de l'assemblage du shield.
+            </p>
+        </section>
+
+        <section class="info-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 25px;">
+            <h2><i class="fas fa-list-check"></i> Résumé de la SAÉ 📝</h2>
+            
+            <p><strong>Réalisation matérielle et Soudure 🛠️ :</strong> La première phase a consisté en l'assemblage complet du prototype. J'ai réalisé la soudure à l'étain de l'ensemble des composants (supports, connecteurs, résistances), en mettant l'accent sur la qualité des joints pour assurer une conductivité optimale.</p>
+
+            <p><strong>Interfaçage et Tests Périphériques 🧪 :</strong> Une fois la carte assemblée, j'ai procédé à la validation du matériel en testant chaque module intégré : les entrées analogiques (potentiomètres, capteur de température CTN) et les interfaces de commande (boutons-poussoirs).</p>
+
+            <p><strong>Développement Informatique (Arduino) 💻 :</strong> À travers une série de Travaux Pratiques, j'ai programmé le microcontrôleur pour gérer des fonctions variées :</p>
+            <ul>
+                <li>✨ Création d'animations lumineuses (chenillards) dont la vitesse est régulée par potentiomètre.</li>
+                <li>🔢 Gestion du multiplexage pour l'affichage numérique sur un écran 7 segments à 4 digits.</li>
+            </ul>
+
+            <p><strong>Application Avancée (Capteur Ultrasons) 📡 :</strong> Le projet s'est achevé par l'intégration d'un capteur HC-SR04, permettant de traiter des signaux d'écho pour calculer et afficher des distances en temps réel.</p>
+        </section>
+
+        <section class="info-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 25px;">
+            <h2><i class="fas fa-camera"></i> Galerie Photos 📸</h2>
+            <div class="slider-container" style="max-width: 700px; margin: auto; position: relative; overflow: hidden; border-radius: 10px; border: 2px solid #ddd;">
+                <div class="slide fade">
+                    <img src="images/shield1.png" style="width:100%" alt="Photo du Shield">
+                    <div style="text-align:center; padding: 10px; background: #003366; color: white;">Vue d'ensemble du Shield 🖼️</div>
+                </div>
+                <div class="slide fade">
+                    <img src="images/shield2.png" style="width:100%" alt="Détail soudures">
+                    <div style="text-align:center; padding: 10px; background: #003366; color: white;">Vue d'ensemble du Shield 🖼️</div>
+                </div>
+                <div class="slide fade">
+                    <img src="images/shield3.png" style="width:100%" alt="Test capteur">
+                    <div style="text-align:center; padding: 10px; background: #003366; color: white;">Détail des soudures 🔍</div>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)" style="position:absolute; top:50%; left:0; cursor:pointer; padding:16px; color:white; font-weight:bold; background: rgba(0,0,0,0.5); text-decoration:none;">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)" style="position:absolute; top:50%; right:0; cursor:pointer; padding:16px; color:white; font-weight:bold; background: rgba(0,0,0,0.5); text-decoration:none;">&#10095;</a>
+            </div>
+        </section>
+
+        <section class="info-card" style="background: #003366; color: white; padding: 25px; border-radius: 12px; margin-bottom: 25px;">
+            <h2 style="color: #c5a059;"><i class="fas fa-award"></i> Bilan 🏆</h2>
+            <p>Ce projet a été le point de départ de ma formation pratique. Il m'a permis d'acquérir une rigueur de câblage et une aisance en programmation indispensables pour réaliser, par la suite, le projet plus complexe du multimètre numérique. ✅</p>
+        </section>
+
+        <section class="info-card" style="background: #f9f9f9; padding: 25px; border-radius: 12px; border: 1px solid #ddd;">
+            <h3 style="color: #003366;"><i class="fas fa-graduation-cap"></i> Apprentissages critiques : Concevoir 🎓</h3>
+            <p><strong>- AC11.02 | Réaliser un prototype pour des solutions techniques matériel et/ou logiciel :</strong> soudure des composants sur le circuit imprimé et programmes Arduino en travaux pratiques 📌</p>
+        </section>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        function plusSlides(n) { showSlides(slideIndex += n); }
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slide");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
+            slides[slideIndex-1].style.display = "block";  
+        }
+    </script>
+    <style>
+        .fade { animation-name: fade; animation-duration: 1.5s; }
+        @keyframes fade { from {opacity: .4} to {opacity: 1} }
+    </style>
+</body>
+</html>

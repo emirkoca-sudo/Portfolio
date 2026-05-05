@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mes Réalisations | Emir Kocaturk</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="index.html" style="color: white; text-decoration: none;">
+                <i class="fas fa-home"></i> EMIR KOCATURK
+            </a>
+        </div>
+        <ul>
+            <li><a href="index.html">Accueil 🏠</a></li>
+            <li><a href="projets.html">Réalisations (SAÉ) 🛠</a></li>
+			<li><a href="cv.html">Ma Candidature 📝</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <header style="text-align: center; margin-bottom: 50px; margin-top: 20px;">
+            <h1 style="color: #003366; font-size: 2.5rem;">Mes Travaux en GEII 🛠️</h1>
+            <p>Découvrez les projets techniques que j'ai réalisés durant ma formation.</p>
+            <div style="height: 4px; width: 80px; background: #c5a059; margin: 15px auto;"></div>
+        </header>
+
+        <div class="projects-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+            
+            <div class="project-card" style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s;">
+                <div style="background: #003366; color: white; padding: 20px; text-align: center;">
+                    <i class="fas fa-microchip fa-3x"></i>
+                </div>
+                <div style="padding: 20px;">
+                    <h3 style="color: #003366;">Shield Arduino Nano ⚡</h3>
+                    <p>Réalisation matérielle et soudure d'une carte d'interface pour microcontrôleur.</p>
+                    <a href="sae-shield.html" class="btn-project" style="display: inline-block; margin-top: 15px; color: #c5a059; font-weight: bold; text-decoration: none;">Voir le projet →</a>
+                </div>
+            </div>
+
+            <div class="project-card" style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s;">
+                <div style="background: #003366; color: white; padding: 20px; text-align: center;">
+                    <i class="fas fa-thermometer-half fa-3x"></i>
+                </div>
+                <div style="padding: 20px;">
+                    <h3 style="color: #003366;">Régulation de température 🌡️</h3>
+                    <p>Étude et mise en œuvre d'un système de contrôle thermique asservi.</p>
+                    <a href="sae-temperature.html" class="btn-project" style="display: inline-block; margin-top: 15px; color: #c5a059; font-weight: bold; text-decoration: none;">Voir le projet →</a>
+                </div>
+            </div>
+
+            <div class="project-card" style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s;">
+                <div style="background: #003366; color: white; padding: 20px; text-align: center;">
+                    <i class="fas fa-bolt fa-3x"></i>
+                </div>
+                <div style="padding: 20px;">
+                    <h3 style="color: #003366;">Multimètre 📏</h3>
+                    <p>Conception d'un appareil de mesure de tension et de courant avec affichage.</p>
+                    <a href="sae-multimetre.html" class="btn-project" style="display: inline-block; margin-top: 15px; color: #c5a059; font-weight: bold; text-decoration: none;">Voir le projet →</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <style>
+        .project-card:hover { transform: translateY(-10px); }
+        .btn-project:hover { text-decoration: underline; color: #003366; }
+    </style>
+</body>
+</html>

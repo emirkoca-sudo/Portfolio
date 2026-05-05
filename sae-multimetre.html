@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Multimètre | Emir Kocaturk</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="index.html" style="color: white; text-decoration: none;">
+                <i class="fas fa-home"></i> EMIR KOCATURK
+            </a>
+        </div>
+        <ul>
+            <li><a href="index.html">Accueil 🏠</a></li>
+            <li><a href="projets.html">Réalisations (SAÉ) 🛠</a></li>
+			<li><a href="cv.html">Ma Candidature 📝</a></li>
+        </ul>
+    </nav>
+
+    <div class="container sae-detail">
+        <header class="sae-header-pro" style="text-align: center; margin-bottom: 40px;">
+            <a href="projets.html" class="back-link"><i class="fas fa-arrow-left"></i> Retour aux projets</a>
+            <h1 style="color: #003366; font-size: 2.5rem; margin-top: 10px;">Multimètre ⚡</h1>
+            <div style="height: 4px; width: 80px; background: #c5a059; margin: 15px auto;"></div>
+        </header>
+
+        <section class="info-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 25px; border-top: 5px solid #003366;">
+            <h2><i class="fas fa-bullseye"></i> Objectif du projet 🎯</h2>
+            <p>Concevoir un instrument de mesure numérique autonome capable de relever des tensions, des courants et des résistances. Ce projet visait à synthétiser les connaissances en électronique analogique et en programmation pour créer un outil de diagnostic précis et fonctionnel.</p>
+            <p>La réalisation de ce multimètre numérique m'a permis de valider deux compétences clés du référentiel GEII :</p>
+            <div style="background: #f0f7ff; padding: 15px; border-left: 4px solid #c5a059; margin-top: 15px; margin-bottom: 10px;">
+                <strong>AC11.02 | Conception et réalisation matérielle :</strong> J'ai validé cette compétence à travers la sélection rigoureuse des composants électroniques, la réalisation du routage sur circuit imprimé et l'assemblage final par soudure de la carte prototype.
+            </div>
+            <div style="background: #f0f7ff; padding: 15px; border-left: 4px solid #c5a059;">
+                <strong>AC12.01 | Tests et mise en service :</strong> J'ai consolidé cet apprentissage en mettant en œuvre des protocoles de tests systématiques, permettant de vérifier la conformité du programme Arduino et d'assurer le bon fonctionnement global du prototype.
+            </div>
+        </section>
+
+        <section class="info-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 25px;">
+            <h2><i class="fas fa-list-check"></i> Résumé de la SAÉ 📝</h2>
+            
+            <p><strong>Objectif du projet :</strong> Concevoir, dans un délai restreint de trois jours, un instrument de mesure fonctionnel capable de relever des tensions, des courants et des résistances.</p>
+            <p>Cette SAÉ a nécessité une approche transverse, mobilisant des connaissances en théorie des circuits, en conception électronique et en programmation embarquée.</p>
+
+            <h3 style="font-size: 1.2rem; color: #003366; margin-top: 20px;">Développement du projet :</h3>
+
+            <p><strong>Étude théorique et dimensionnement 🧠 :</strong> La phase initiale a porté sur l'application des concepts d'automatisme (logiciels et logiques) et d'électronique analogique. J'ai notamment dimensionné les ponts diviseurs de tension ainsi que les résistances de protection nécessaires à la précision des mesures.</p>
+
+            <p><strong>Conception et Routage 💻 :</strong> J'ai réalisé la modélisation du circuit et le routage de la carte électronique (PCB), en veillant à l'optimisation des pistes pour garantir un signal stable.</p>
+
+            <p><strong>Réalisation pratique 🛠️ :</strong> J'ai procédé à l'assemblage manuel des composants par soudure. Cette étape a été validée par des tests de continuité et des mesures de mise sous tension pour confirmer la conformité du montage matériel.</p>
+
+            <p><strong>Développement Informatique (Arduino) 🤖 :</strong> La programmation du microcontrôleur a permis de répondre aux exigences du cahier des charges :</p>
+            <ul>
+                <li>Implémentation de <strong>calibres automatiques</strong> pour maximiser la précision selon la plage de mesure.</li>
+                <li>Gestion d'une <strong>interface utilisateur</strong> avec des LEDs témoins pour identifier les modes (Voltmètre, Ampèremètre, Ohmmètre).</li>
+                <li>Formatage et affichage des résultats en temps réel sur un <strong>écran 7 segments à 4 digits</strong>.</li>
+            </ul>
+        </section>
+
+        <section class="info-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 25px;">
+            <h2><i class="fas fa-camera"></i> Galerie Photos 📸</h2>
+            <div class="slider-container" style="max-width: 700px; margin: auto; position: relative; overflow: hidden; border-radius: 10px; border: 2px solid #ddd;">
+                <div class="slide fade">
+                    <img src="images/multi1.png" style="width:100%" alt="Multimètre Face">
+                    <div style="text-align:center; padding: 10px; background: #003366; color: white;">Le Multimètre terminé 🖼️</div>
+                </div>
+                <div class="slide fade">
+                    <img src="images/multi2.png" style="width:100%" alt="PCB Multimètre">
+                    <div style="text-align:center; padding: 10px; background: #003366; color: white;">Le Multimètre terminé 🖼️</div>
+                </div>
+                <div class="slide fade">
+                    <img src="images/multi3.png" style="width:100%" alt="Tests Multimètre">
+                    <div style="text-align:center; padding: 10px; background: #003366; color: white;">Détail des soudures 🔍</div>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)" style="position:absolute; top:50%; left:0; cursor:pointer; padding:16px; color:white; font-weight:bold; background: rgba(0,0,0,0.5); text-decoration:none;">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)" style="position:absolute; top:50%; right:0; cursor:pointer; padding:16px; color:white; font-weight:bold; background: rgba(0,0,0,0.5); text-decoration:none;">&#10095;</a>
+            </div>
+        </section>
+
+        <section class="info-card" style="background: #003366; color: white; padding: 25px; border-radius: 12px; margin-bottom: 25px;">
+            <h2 style="color: #c5a059;"><i class="fas fa-award"></i> Bilan 🏆</h2>
+            <p>Ce projet a été une opportunité concrète de synthétiser les compétences acquises lors du premier semestre. Il m'a permis de transformer un schéma théorique en un produit fini, opérationnel et testé en conditions réelles. ✅</p>
+        </section>
+
+        <section class="info-card" style="background: #f9f9f9; padding: 25px; border-radius: 12px; border: 1px solid #ddd;">
+            <h3 style="color: #003366;"><i class="fas fa-graduation-cap"></i> Apprentissages critiques : Concevoir 🎓</h3>
+            <p><strong>- AC11.01 | Produire une analyse fonctionnelle d’un système simple :</strong> analyse du dossier de conception avec découpage du multimètre en plusieurs étapes : multiplexage, calibrage. 📌</p>
+            <p><strong>- AC11.02 | Réaliser un prototype pour des solutions techniques matériel et/ou logiciel :</strong> soudure des composants et réalisation du programme Arduino. 📌</p>
+        </section>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        function plusSlides(n) { showSlides(slideIndex += n); }
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slide");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
+            slides[slideIndex-1].style.display = "block";  
+        }
+    </script>
+    <style>
+        .fade { animation-name: fade; animation-duration: 1.5s; }
+        @keyframes fade { from {opacity: .4} to {opacity: 1} }
+    </style>
+</body>
+</html>
