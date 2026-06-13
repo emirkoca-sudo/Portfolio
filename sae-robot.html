@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Robot Suiveur de Ligne et de Mur | Emir Kocaturk</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="index.html" style="color: white; text-decoration: none;">
+                <i class="fas fa-home"></i> EMIR KOCATURK
+            </a>
+        </div>
+        <ul>
+            <li><a href="index.html">Accueil 🏠</a></li>
+            <li><a href="projets.html">Réalisations (SAÉ) 🛠️</a></li>
+        </ul>
+    </nav>
+
+    <div class="container sae-detail">
+        <header class="sae-header-pro" style="text-align: center; margin-bottom: 40px;">
+            <a href="projets.html" class="back-link"><i class="fas fa-arrow-left"></i> Retour aux projets</a>
+            <h1 style="color: #003366; font-size: 2.5rem; margin-top: 10px;">Robot Suiveur de Ligne et de Mur 🤖</h1>
+            <div style="height: 4px; width: 80px; background: #c5a059; margin: 15px auto;"></div>
+        </header>
+
+        <section class="info-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 25px; border-top: 5px solid #003366;">
+            <h2><i class="fas fa-bullseye"></i> Objectif du projet 🎯</h2>
+            <p>Concevoir, fabriquer et programmer un robot mobile autonome complexe capable de naviguer sur un circuit combinant un suivi de ligne au sol, la gestion d'intersections spécifiques, et une transition automatique vers un suivi de mur (LiDAR) en cas de disparition du marquage noir, tout en assurant l'évitement d'obstacles frontaux.</p>
+            <p>Ce projet collaboratif a nécessité une imbrication forte entre le développement matériel (routage KiCad et fabrication de cartes de puissance) et logiciel (programmation d'une machine à états finis sous Arduino).</p>
+        </section>
+
+        <section class="info-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 25px;">
+            <h2><i class="fas fa-list-check"></i> Résumé de la SAÉ 📝</h2>
+            
+            <h3 style="font-size: 1.2rem; color: #003366; margin-top: 10px;">Phase Matérielle : Conception et Fabrication</h3>
+            <p><strong>Étude théorique et Schéma :</strong> Les moteurs ne pouvant être alimentés en puissance par l'Arduino, j'ai étudié et implémenté l'intégration de deux drivers de puissance VNH7070 (un par moteur) pour faire l'interface entre la commande et la puissance. Un premier croquis manuel a validé l'architecture.</p>
+            <p><strong>Routage KiCad et PCB :</strong> J'ai réalisé la modélisation complète sur KiCad, placé les connecteurs moteurs et Arduino, puis généré le PCB et sa vue 3D.</p>
+            <p><strong>Fabrication physique :</strong> La fabrication a suivi un protocole industriel strict : 
+                <em>insolation UV</em>, <em>révélation en bain</em>, <em>gravure chimique</em>, et <em>déstripage</em> de la résine. L'assemblage s'est fait par insertion de fils pour la continuité des vias double face, application de pâte à braser à la seringue pour les empreintes CMS VNH7070, passage au four de refusion, et soudures manuelles des connecteurs.
+            </p>
+
+            <h3 style="font-size: 1.2rem; color: #003366; margin-top: 20px;">Phase Logicielle : Programmation et Algorithmique</h3>
+            <p><strong>Contrôle moteurs :</strong> Développement des fonctions de bas niveau pour gérer le sens de rotation (broches logiques INA/INB) et la vitesse (signaux PWM/MLI) des moteurs.</p>
+            <p><strong>Suivi de mur par LiDARs :</strong> Intégration de deux capteurs VL53L1X isolés sur le bus I2C via leurs broches XSHUT pour modifier leurs adresses. Implémentation d'un contrôle proportionnel pour adapter la trajectoire le long du mur via l'équation affine mathématique : <code>correction = (-0.12 * distanceMur) + 26</code>, assurant une correction fluide plutôt que par à-coups.</p>
+            <p><strong>Machine à états et Interface :</strong> Structuration globale sous forme de machine à états pour basculer de mode à chaque appui sur un bouton physique, associée à un retour visuel sur un bandeau de LED NeoPixel (rose pour le suivi de mur, bleu ciel pour la sécurité obstacle avant à 15 cm, violet pour l'arrêt sur ligne, et un affichage tricolore de la jauge batterie).</p>
+            <p><strong>Intersections et Intégration Finale :</strong> Programmation du comptage des marques noires latérales via le moniteur série pour valider les décisions de virage à l'intersection. Gestion complexe de l'enchaînement des comportements (suivi de ligne ➔ détection de marque et virage ➔ perte de ligne et bascule automatique sur suivi de mur LiDAR ➔ détection et récupération de la ligne noire pour reprendre le suivi au sol).</p>
+        </section>
+
+        <section class="info-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 25px; border-left: 5px solid #003366;">
+            <h3 style="color: #003366; margin-bottom: 15px;"><i class="fas fa-graduation-cap"></i> Apprentissages critiques : Concevoir 🎓</h3>
+            <div style="background: #f0f7ff; padding: 15px; border-left: 4px solid #c5a059; margin-bottom: 10px;">
+                <strong>AC11.01 | Analyse fonctionnelle d’un système :</strong> J'ai découpé l'architecture du robot en fonctions distinctes (alimentation de puissance autonome, pilotage en pont en H via VNH7070, bus de communication I2C pour les LiDARs, et captation optique pour le suivi au sol).
+            </div>
+            <div style="background: #f0f7ff; padding: 15px; border-left: 4px solid #c5a059; margin-bottom: 10px;">
+                <strong>AC11.02 | Réalisation de prototypes :</strong> J'ai réalisé l'intégralité du processus de fabrication du PCB (chimie et brasage CMS au four) et structuré un code modulaire organisé en fonctions de mouvements et en machine à états finis.
+            </div>
+            <div style="background: #f0f7ff; padding: 15px; border-left: 4px solid #c5a059;">
+                <strong>AC11.03 | Rédiger un dossier de fabrication :</strong> J'ai documenté le fonctionnement global, les schémas structurels KiCad, les vues 3D, le code source des différentes étapes de tests et les équations de correction de trajectoire.
+            </div>
+        </section>
+
+        <section class="info-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 25px; border-left: 5px solid #e67e22;">
+            <h3 style="color: #e67e22; margin-bottom: 15px;"><i class="fas fa-check-circle"></i> Apprentissages critiques : Vérifier 🎓</h3>
+            <div style="background: #fdfaf0; padding: 15px; border-left: 4px solid #e67e22; margin-bottom: 10px;">
+                <strong>AC12.01 | Procédure d’essais :</strong> J'ai mis en place des protocoles unitaires rigoureux (vérification de la continuité électrique des vias, test individuel des moteurs en marche avant/arrière/freinage, et calibration des capteurs de distance via le moniteur de débogage série).
+            </div>
+            <div style="background: #fdfaf0; padding: 15px; border-left: 4px solid #e67e22;">
+                <strong>AC12.02 | Identification de dysfonctionnements :</strong> Lors des essais d'intégration sur piste, j'ai identifié des rebonds ou des bugs logiques empêchant le robot de repasser correctement en mode suivi de ligne après une phase de suivi de mur, m'obligeant à isoler temporairement les programmes de test et à ajuster les priorités des variables d'état face aux conditions matérielles réelles.
+            </div>
+        </section>
+
+        <section class="info-card" style="background: #003366; color: white; padding: 25px; border-radius: 12px; margin-bottom: 25px;">
+            <h2 style="color: #c5a059;"><i class="fas fa-award"></i> Bilan 🏆</h2>
+            <p>Cette SAÉ a été le projet le plus transverse et le plus formateur. Elle m'a permis d'assimiler les contraintes concrètes de l'interfaçage de puissance (drivers CMS), de manipuler la communication inter-composants (I2C individualisé) et de concevoir des algorithmes mathématiques asservis pour répondre à un cahier des charges robotique complexe et évolutif. ✅</p>
+        </section>
+    </div>
+</body>
+</html>
