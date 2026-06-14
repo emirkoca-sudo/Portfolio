@@ -49,6 +49,50 @@
             <p><strong>Intersections et Intégration Finale :</strong> Programmation du comptage des marques noires latérales via le moniteur série pour valider les décisions de virage à l'intersection. Gestion complexe de l'enchaînement des comportements (suivi de ligne ➔ détection de marque et virage ➔ perte de ligne et bascule automatique sur suivi de mur LiDAR ➔ détection et récupération de la ligne noire pour reprendre le suivi au sol).</p>
         </section>
 
+        <section class="info-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 25px;">
+            <h2><i class="fas fa-images"></i> Galerie de conception et fabrication 📸</h2>
+            <p>Découvrez toutes les étapes illustrées de ma partie matérielle et des tests du robot :</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 20px;">
+                
+                <div style="text-align: center; background: #f9f9f9; padding: 10px; border-radius: 8px; border: 1px solid #ddd;">
+                    <img src="images/kicad.png" alt="Schéma électronique KiCad" style="width: 100%; height: 200px; object-fit: cover; border-radius: 6px;">
+                    <p style="margin-top: 8px; font-size: 0.9rem; color: #555; font-weight: bold;">Schéma Électronique (KiCad) 💻</p>
+                </div>
+
+                <div style="text-align: center; background: #f9f9f9; padding: 10px; border-radius: 8px; border: 1px solid #ddd;">
+                    <img src="images/3d.png" alt="Vue 3D de la carte" style="width: 100%; height: 200px; object-fit: cover; border-radius: 6px;">
+                    <p style="margin-top: 8px; font-size: 0.9rem; color: #555; font-weight: bold;">Modélisation 3D du PCB 🔍</p>
+                </div>
+
+                <div style="text-align: center; background: #f9f9f9; padding: 10px; border-radius: 8px; border: 1px solid #ddd;">
+                    <img src="images/kicad2.png" alt="Routage des pistes" style="width: 100%; height: 200px; object-fit: cover; border-radius: 6px;">
+                    <p style="margin-top: 8px; font-size: 0.9rem; color: #555; font-weight: bold;">Routage des Pistes et Vias 🎛️</p>
+                </div>
+
+                <div style="text-align: center; background: #f9f9f9; padding: 10px; border-radius: 8px; border: 1px solid #ddd;">
+                    <img src="images/robot.png" alt="Photo du robot 1" style="width: 100%; height: 200px; object-fit: cover; border-radius: 6px;">
+                    <p style="margin-top: 8px; font-size: 0.9rem; color: #555; font-weight: bold;">Châssis et Intégration Moteurs 🤖</p>
+                </div>
+
+                <div style="text-align: center; background: #f9f9f9; padding: 10px; border-radius: 8px; border: 1px solid #ddd;">
+                    <img src="images/robot2.png" alt="Photo du robot 2" style="width: 100%; height: 200px; object-fit: cover; border-radius: 6px;">
+                    <p style="margin-top: 8px; font-size: 0.9rem; color: #555; font-weight: bold;">Câblage des Nappes & Drivers 🛠️</p>
+                </div>
+
+                <div style="text-align: center; background: #f9f9f9; padding: 10px; border-radius: 8px; border: 1px solid #ddd;">
+                    <img src="images/robot3.png" alt="Photo du robot 3" style="width: 100%; height: 200px; object-fit: cover; border-radius: 6px;">
+                    <p style="margin-top: 8px; font-size: 0.9rem; color: #555; font-weight: bold;">Tests des Capteurs LiDAR ⚡</p>
+                </div>
+
+                <div style="text-align: center; background: #f9f9f9; padding: 10px; border-radius: 8px; border: 1px solid #ddd;">
+                    <img src="images/robot4.png" alt="Photo du robot 4" style="width: 100%; height: 200px; object-fit: cover; border-radius: 6px;">
+                    <p style="margin-top: 8px; font-size: 0.9rem; color: #555; font-weight: bold;">Essais sur Piste Finale 🏁</p>
+                </div>
+
+            </div>
+        </section>
+
         <section class="info-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 25px; border-left: 5px solid #003366;">
             <h3 style="color: #003366; margin-bottom: 15px;"><i class="fas fa-graduation-cap"></i> Apprentissages critiques : Concevoir 🎓</h3>
             <div style="background: #f0f7ff; padding: 15px; border-left: 4px solid #c5a059; margin-bottom: 10px;">
@@ -68,13 +112,16 @@
                 <strong>AC12.01 | Procédure d’essais :</strong> J'ai mis en place des protocoles unitaires rigoureux (vérification de la continuité électrique des vias, test individuel des moteurs en marche avant/arrière/freinage, et calibration des capteurs de distance via le moniteur de débogage série).
             </div>
             <div style="background: #fdfaf0; padding: 15px; border-left: 4px solid #e67e22;">
-                <strong>AC12.02 | Identification de dysfonctionnements :</strong> Lors des essais d'intégration sur piste, j'ai identifié des rebonds ou des bugs logiques empêchant le robot de repasser correctement en mode suivi de ligne après une phase de suivi de mur, m'obligeant à isoler temporairement les programmes de test et à ajuster les priorités des variables d'état face aux conditions matérielles réelles.
+                <strong>AC12.02 | Identification de dysfonctionnements :</strong> Lors des essais d'intégration sur piste, j'ai identifié des bugs logiques empêchant le robot de repasser correctement en mode suivi de ligne après une phase de suivi de mur, m'obligeant à isoler temporairement les programmes de test et à ajuster les priorités des variables d'état face aux conditions matérielles réelles.
             </div>
         </section>
 
-        <section class="info-card" style="background: #003366; color: white; padding: 25px; border-radius: 12px; margin-bottom: 25px;">
-            <h2 style="color: #c5a059;"><i class="fas fa-award"></i> Bilan 🏆</h2>
-            <p>Cette SAÉ a été le projet le plus transverse et le plus formateur. Elle m'a permis d'assimiler les contraintes concrètes de l'interfaçage de puissance (drivers CMS), de manipuler la communication inter-composants (I2C individualisé) et de concevoir des algorithmes mathématiques asservis pour répondre à un cahier des charges robotique complexe et évolutif. ✅</p>
+        <section class="info-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 25px;">
+            <h2><i class="fas fa-file-pdf"></i> Rapport de SAÉ 📖</h2>
+            <p>Retrouvez ci-dessous le dossier technique complet, les schémas électroniques et l'algorithme du robot :</p>
+            <div style="margin-top: 20px; border: 2px solid #ddd; border-radius: 8px; overflow: hidden;">
+                <embed src="rapport-robot.pdf" type="application/pdf" width="100%" height="800px" />
+            </div>
         </section>
     </div>
 </body>
