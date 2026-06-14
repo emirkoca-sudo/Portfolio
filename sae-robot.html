@@ -16,12 +16,13 @@
         <ul>
             <li><a href="index.html">Accueil 🏠</a></li>
             <li><a href="projets.html">Réalisations (SAÉ) 🛠️</a></li>
+            <li><a href="cv.html">Ma Candidature 📝</a></li>
         </ul>
     </nav>
 
     <div class="container sae-detail">
-        <header class="sae-header-pro" style="text-align: center; margin-bottom: 40px;">
-            <a href="projets.html" class="back-link"><i class="fas fa-arrow-left"></i> Retour aux projets</a>
+        <header class="sae-header-pro" style="text-align: center; margin-bottom: 40px; margin-top: 20px;">
+            <a href="projets.html" class="back-link" style="color: #c5a059; text-decoration: none; font-weight: bold;"><i class="fas fa-arrow-left"></i> Retour aux projets</a>
             <h1 style="color: #003366; font-size: 2.5rem; margin-top: 10px;">Robot Suiveur de Ligne et de Mur 🤖</h1>
             <div style="height: 4px; width: 80px; background: #c5a059; margin: 15px auto;"></div>
         </header>
@@ -51,24 +52,71 @@
 
         <section class="info-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 25px;">
             <h2><i class="fas fa-images"></i> Galerie de conception et fabrication 📸</h2>
-            <p>Faites défiler les photos pour découvrir toutes les étapes du projet :</p>
+            <p>Utilisez les flèches ou glissez l'image pour voir les étapes une par une :</p>
             
-            <div style="position: relative; overflow: hidden; margin-top: 20px;">
-                <div style="display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; gap: 20px; padding-bottom: 15px; -webkit-overflow-scrolling: touch;">
+            <div style="position: relative; max-width: 600px; margin: 20px auto; overflow: hidden;">
+                <div id="robot-slider" style="display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; gap: 0; padding-bottom: 10px; -webkit-overflow-scrolling: touch;">
                     
-                    <div style="flex: 0 0 300px; scroll-snap-align: start; text-align: center; background: #f9f9f9; padding: 10px; border-radius: 8px; border: 1px solid #ddd;">
-                        <img src="images/kicad.png" alt="Schéma électronique KiCad" style="width: 100%; height: 200px; object-fit: cover; border-radius: 6px;">
-                        <p style="margin-top: 8px; font-size: 0.9rem; color: #555; font-weight: bold;">Schéma Électronique (KiCad) 💻</p>
+                    <div style="flex: 0 0 100%; scroll-snap-align: start; text-align: center; box-sizing: border-box; padding: 0 10px;">
+                        <img src="images/kicad.png" alt="Schéma électronique KiCad" style="width: 100%; height: 350px; object-fit: contain; background: #f9f9f9; border-radius: 8px; border: 1px solid #ddd;">
+                        <p style="margin-top: 10px; font-size: 1rem; color: #003366; font-weight: bold;">Schéma Électronique (KiCad) 💻</p>
                     </div>
 
-                    <div style="flex: 0 0 300px; scroll-snap-align: start; text-align: center; background: #f9f9f9; padding: 10px; border-radius: 8px; border: 1px solid #ddd;">
-                        <img src="images/3d.png" alt="Vue 3D de la carte" style="width: 100%; height: 200px; object-fit: cover; border-radius: 6px;">
-                        <p style="margin-top: 8px; font-size: 0.9rem; color: #555; font-weight: bold;">Modélisation 3D du PCB 🔍</p>
+                    <div style="flex: 0 0 100%; scroll-snap-align: start; text-align: center; box-sizing: border-box; padding: 0 10px;">
+                        <img src="images/3d.png" alt="Vue 3D de la carte" style="width: 100%; height: 350px; object-fit: contain; background: #f9f9f9; border-radius: 8px; border: 1px solid #ddd;">
+                        <p style="margin-top: 10px; font-size: 1rem; color: #003366; font-weight: bold;">Modélisation 3D du PCB 🔍</p>
                     </div>
 
-                    <div style="flex: 0 0 300px; scroll-snap-align: start; text-align: center; background: #f9f9f9; padding: 10px; border-radius: 8px; border: 1px solid #ddd;">
-                        <img src="images/kicad2.png" alt="Routage des pistes" style="width: 100%; height: 200px; object-fit: cover; border-radius: 6px;">
-                        <p style="margin-top: 8px; font-size: 0.9rem; color: #555; font-weight: bold;">Routage des Pistes et Vias 🎛️</p>
+                    <div style="flex: 0 0 100%; scroll-snap-align: start; text-align: center; box-sizing: border-box; padding: 0 10px;">
+                        <img src="images/kicad2.png" alt="Routage des pistes" style="width: 100%; height: 350px; object-fit: contain; background: #f9f9f9; border-radius: 8px; border: 1px solid #ddd;">
+                        <p style="margin-top: 10px; font-size: 1rem; color: #003366; font-weight: bold;">Routage des Pistes et Vias 🎛️</p>
                     </div>
 
-                    <div style="flex: 0 0 300px; scroll-snap-align: start; text-align:
+                    <div style="flex: 0 0 100%; scroll-snap-align: start; text-align: center; box-sizing: border-box; padding: 0 10px;">
+                        <img src="images/robot.png" alt="Photo du robot 1" style="width: 100%; height: 350px; object-fit: contain; background: #f9f9f9; border-radius: 8px; border: 1px solid #ddd;">
+                        <p style="margin-top: 10px; font-size: 1rem; color: #003366; font-weight: bold;">Châssis & Moteurs 🤖</p>
+                    </div>
+
+                    <div style="flex: 0 0 100%; scroll-snap-align: start; text-align: center; box-sizing: border-box; padding: 0 10px;">
+                        <img src="images/robot2.png" alt="Photo du robot 2" style="width: 100%; height: 350px; object-fit: contain; background: #f9f9f9; border-radius: 8px; border: 1px solid #ddd;">
+                        <p style="margin-top: 10px; font-size: 1rem; color: #003366; font-weight: bold;">Câblage des Drivers 🛠️</p>
+                    </div>
+
+                    <div style="flex: 0 0 100%; scroll-snap-align: start; text-align: center; box-sizing: border-box; padding: 0 10px;">
+                        <img src="images/robot3.png" alt="Photo du robot 3" style="width: 100%; height: 350px; object-fit: contain; background: #f9f9f9; border-radius: 8px; border: 1px solid #ddd;">
+                        <p style="margin-top: 10px; font-size: 1rem; color: #003366; font-weight: bold;">Tests des Capteurs LiDAR ⚡</p>
+                    </div>
+
+                    <div style="flex: 0 0 100%; scroll-snap-align: start; text-align: center; box-sizing: border-box; padding: 0 10px;">
+                        <img src="images/robot4.png" alt="Photo du robot 4" style="width: 100%; height: 350px; object-fit: contain; background: #f9f9f9; border-radius: 8px; border: 1px solid #ddd;">
+                        <p style="margin-top: 10px; font-size: 1rem; color: #003366; font-weight: bold;">Essais sur Piste Finale 🏁</p>
+                    </div>
+
+                </div>
+
+                <button onclick="document.getElementById('robot-slider').scrollBy({left: -400, behavior: 'smooth'})" style="position: absolute; left: 15px; top: 45%; transform: translateY(-50%); background: rgba(0,51,102,0.8); color: white; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; z-index: 10;"><i class="fas fa-chevron-left"></i></button>
+                <button onclick="document.getElementById('robot-slider').scrollBy({left: 400, behavior: 'smooth'})" style="position: absolute; right: 15px; top: 45%; transform: translateY(-50%); background: rgba(0,51,102,0.8); color: white; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; z-index: 10;"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            
+            <div style="text-align: center; color: #888; font-size: 0.85rem; margin-top: 5px;">
+                <i class="fas fa-arrows-left-right"></i> Glissez ou cliquez sur les flèches pour faire défiler
+            </div>
+        </section>
+
+        <section class="info-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 25px; border-left: 5px solid #003366;">
+            <h3 style="color: #003366; margin-bottom: 15px;"><i class="fas fa-graduation-cap"></i> Apprentissages critiques : Concevoir 🎓</h3>
+            <div style="background: #f0f7ff; padding: 15px; border-left: 4px solid #c5a059; margin-bottom: 10px;">
+                <strong>AC11.01 | Analyse fonctionnelle d’un système :</strong> J'ai découpé l'architecture du robot en fonctions distinctes (alimentation de puissance autonome, pilotage en pont en H via VNH7070, bus de communication I2C pour les LiDARs, et captation optique pour le suivi au sol).
+            </div>
+            <div style="background: #f0f7ff; padding: 15px; border-left: 4px solid #c5a059; margin-bottom: 10px;">
+                <strong>AC11.02 | Réalisation de prototypes :</strong> J'ai réalisé l'intégralité du processus de fabrication du PCB (chimie et brasage CMS au four) et structuré un code modulaire organisé en fonctions de mouvements et en machine à états finis.
+            </div>
+            <div style="background: #f0f7ff; padding: 15px; border-left: 4px solid #c5a059;">
+                <strong>AC11.03 | Rédiger un dossier de fabrication :</strong> J'ai documenté le fonctionnement global, les schémas structurels KiCad, les vues 3D, le code source des différentes étapes de tests et les équations de correction de trajectoire.
+            </div>
+        </section>
+
+        <section class="info-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 25px; border-left: 5px solid #e67e22;">
+            <h3 style="color: #e67e22; margin-bottom: 15px;"><i class="fas fa-check-circle"></i> Apprentissages critiques : Vérifier 🎓</h3>
+            <div style="background: #fdfaf0; padding: 15px; border-left: 4px solid #e67e22; margin-bottom: 10px;">
+                <strong>AC12.01 | Procédure d’essais :</strong> J'ai mis en place des protocoles
