@@ -44,39 +44,33 @@
             <p>Pour pousser le vérin au bon moment sans ajouter de capteurs physiques devant chaque bac, nous avons programmé un <strong>système de comptage virtuel</strong> lié au déplacement du tapis. Une came tourne en synchronisation avec le tapis, et l'automate compte chaque impulsion sur les <strong>fronts montants et descendants</strong> pour doubler la précision du positionnement. Dès que le compteur atteint la valeur associée à la couleur détectée, le vérin s'active pour éjecter la pièce.</p>
         </section>
 
+        <!-- SECTION PHOTO FIXE UNIQUE -->
         <section class="info-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 25px;">
-            <h2><i class="fas fa-images"></i> Galerie de conception</h2>
-            <div style="position: relative; max-width: 600px; margin: 20px auto; overflow: hidden;">
-                <div id="thumb-slider" style="display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; gap: 10px; padding-bottom: 10px;">
-                    <div style="flex: 0 0 180px; text-align: center; border: 1px solid #ddd; padding: 5px; background: #fafafa; border-radius: 6px;">
-                        <img src="images/maquette-tapis.png" alt="Maquette" style="width: 100%; height: 120px; object-fit: contain;">
-                        <p style="margin: 5px 0 0 0; font-size: 0.8rem; color: #555;">images/maquette.png</p>
-                    </div>
-                    <div style="flex: 0 0 180px; text-align: center; border: 1px solid #ddd; padding: 5px; background: #fafafa; border-radius: 6px;">
-                        <img src="images/capteurs.png" alt="Capteurs" style="width: 100%; height: 120px; object-fit: contain;">
-                        <p style="margin: 5px 0 0 0; font-size: 0.8rem; color: #555;">images/capteurs.png</p>
-                    </div>
-                    <div style="flex: 0 0 180px; text-align: center; border: 1px solid #ddd; padding: 5px; background: #fafafa; border-radius: 6px;">
-                        <img src="images/came-comptage.png" alt="Came" style="width: 100%; height: 120px; object-fit: contain;">
-                        <p style="margin: 5px 0 0 0; font-size: 0.8rem; color: #555;">images/came.png</p>
-                    </div>
-                </div>
+            <h2><i class="fas fa-image"></i> Aperçu du système</h2>
+            <div style="max-width: 500px; margin: 20px auto; text-align: center; border: 1px solid #ddd; padding: 8px; background: #fafafa; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                <img src="images/maquette-tapis.png" alt="Maquette du Tapis de Tri Automatique" style="width: 100%; height: auto; max-height: 300px; object-fit: contain; border-radius: 4px; background: white;">
+                <p style="margin: 8px 0 0 0; font-size: 0.8rem; color: #666; font-weight: bold; font-family: monospace;">images/maquette-tapis.png</p>
             </div>
-            <div style="text-align: left; font-size: 0.85rem; color: #666; font-weight: bold;">➔ Glissez de gauche à droite pour faire défiler.</div>
         </section>
 
+        <!-- APPRENTISSAGES CRITIQUES REVISITÉS AVEC LES BONS INTITULÉS DE COMPÉTENCES -->
         <section class="info-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 25px; border-left: 5px solid #003366;">
             <h3 style="color: #003366; margin-bottom: 15px;"><i class="fas fa-drafting-compass"></i> Apprentissages critiques : Concevoir 🎓</h3>
             <div style="background: #f0f7ff; padding: 15px; border-left: 4px solid #c5a059;">
-                <strong>Compétence : Développer une logique d'automatisme programmable</strong><br>
-                Conception et structuration de l'algorithme de tri sous forme de Grafcet, en intégrant le traitement des signaux analogiques (tensions du capteur) et la gestion du temps via le comptage d'impulsions.
+                <strong>Compétence : Concevoir la partie commande d'un système d'automatisme industriel</strong><br>
+                Développement, structuration et encodage de la logique séquentielle sous forme de Grafcet (langage SFC/Ladder) sur l'automate Schneider, incluant la gestion temporelle et l'acquisition des signaux du système.
             </div>
         </section>
 
         <section class="info-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 25px; border-left: 5px solid #e67e22;">
             <h3 style="color: #e67e22; margin-bottom: 15px;"><i class="fas fa-check-circle"></i> Apprentissages critiques : Vérifier 🎓</h3>
-            <div style="background: #fdfaf0; padding: 15px; border-left: 4px solid #e67e22; margin-bottom: 10px;">
-                <strong>Compétence : Calibration de capteurs industriels</strong><br>
-                Analyse des variations de tension émises par le capteur chromatique afin d'isoler des plages numériques stables pour discriminer chaque couleur sans erreur.
-            </div>
             <div style="background: #fdfaf0; padding: 15px; border-left: 4px solid #e67e22;">
+                <strong>Compétence : Vérifier les performances d'une chaîne de mesure analogique</strong><br>
+                Étalonnage du capteur de couleur industriel, échantillonnage des seuils de tension réfléchie et traitement numérique des fenêtres de tolérance dans l'automate pour éliminer les erreurs de tri liées à la lumière ambiante.
+            </div>
+        </section>
+        
+    </div>
+
+</body>
+</html>
