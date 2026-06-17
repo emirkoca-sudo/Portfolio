@@ -2,127 +2,89 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Tri Automatisé de Pièces | Emir Kocaturk</title>
+    <title>EMIR KOCATURK - Réalisations (SAÉ)</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { font-family: 'Arial', sans-serif; background-color: #f4f7f6; margin: 0; padding: 0; }
+        .nav-bar { background-color: #002244; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; color: white; font-weight: bold; }
+        .nav-links a { color: white; text-decoration: none; margin-left: 20px; font-size: 0.9rem; }
+        .container { max-width: 1200px; margin: 20px auto; padding: 0 20px; }
+        .page-title { text-align: center; color: #333; font-size: 1.8rem; margin-bottom: 25px; font-weight: bold; }
+        
+        /* Style exact des cartes bleues de la photo */
+        .sae-container { background: #fff; border-radius: 8px; padding: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-bottom: 30px; }
+        .sae-title { font-size: 1.6rem; color: #333; text-align: center; margin-bottom: 20px; font-weight: bold; }
+        .block-title { background-color: #004080; color: white; padding: 8px 15px; font-size: 1.1rem; font-weight: bold; border-radius: 4px; margin-top: 20px; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .block-content { font-size: 0.95rem; color: #333; line-height: 1.6; padding: 5px 10px; }
+        
+        /* Galerie photo horizontale de la photo */
+        .gallery-wrapper { position: relative; margin-top: 15px; }
+        .gallery-container { display: flex; overflow-x: auto; scroll-behavior: smooth; gap: 15px; padding: 10px 5px; scroll-snap-type: x mandatory; }
+        .gallery-container::-webkit-scrollbar { display: none; }
+        .gallery-item { flex: 0 0 180px; scroll-snap-align: start; text-align: center; background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .gallery-item img { width: 100%; height: 120px; object-fit: contain; background: #fafafa; border-radius: 4px; }
+        .gallery-item p { margin: 8px 0 0 0; font-size: 0.8rem; color: #555; font-weight: bold; }
+        
+        .nav-btn { position: absolute; top: 50%; transform: translateY(-50%); background: #004080; color: white; border: none; width: 30px; height: 30px; border-radius: 4px; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 10; opacity: 0.8; }
+        .nav-btn:hover { opacity: 1; }
+        .btn-left { left: -10px; }
+        .btn-right { right: -10px; }
+        
+        .gallery-footer { text-align: left; font-size: 0.85rem; color: #666; margin-top: 10px; font-weight: bold; }
+    </style>
 </head>
 <body>
-    <!-- NAVIGATION 🏠 -->
-    <nav>
-        <div class="logo">
-            <a href="index.html" style="color: white; text-decoration: none;">
-                <i class="fas fa-home"></i> EMIR KOCATURK
-            </a>
-        </div>
-        <ul>
-            <li><a href="index.html">Accueil 🏠</a></li>
-            <li><a href="projets.html">Réalisations (SAÉ) 🛠️</a></li>
-            <li><a href="cv.html">Ma Candidature 📝</a></li>
-        </ul>
-    </nav>
 
-    <div class="container sae-detail">
-        <header class="sae-header-pro" style="text-align: center; margin-bottom: 40px; margin-top: 20px;">
-            <a href="projets.html" class="back-link" style="color: #c5a059; text-decoration: none; font-weight: bold;"><i class="fas fa-arrow-left"></i> Retour aux projets</a>
-            <h1 style="color: #003366; font-size: 2.5rem; margin-top: 10px;">Système de Tri Automatique sur Tapis Roulant ⚙️</h1>
-            <div style="height: 4px; width: 80px; background: #c5a059; margin: 15px auto;"></div>
-        </header>
-
-        <!-- 1. OBJECTIF DU PROJET 🎯 -->
-        <section class="info-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 25px; border-top: 5px solid #003366;">
-            <h2><i class="fas fa-bullseye"></i> Objectif du projet 🎯</h2>
-            <p>Programmer et configurer une ligne de production automatisée miniature capable d'identifier, de suivre et de trier des pièces cylindriques en fonction de leur couleur (rouge, bleu, blanche) vers des bacs de stockage ("magasins") distincts, à l'aide de capteurs optiques et de vérins pneumatiques.</p>
-        </section>
-
-        <!-- 2. RÉSUMÉ DE LA SAÉ DÉTAILLÉ 📝 -->
-        <section class="info-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 25px;">
-            <h2><i class="fas fa-list-check"></i> Résumé de la SAÉ 📝</h2>
-            
-            <h3 style="font-size: 1.2rem; color: #003366; margin-top: 10px;">Détection Optique et Analyse de Tension</h3>
-            <p>Le cycle démarre lorsqu'une pièce coupe un premier capteur de présence appelé <strong>barrière lumineuse en amont</strong>. Le tapis roulant s'active alors à sa tension nominale de <strong>7,7 V</strong>. La pièce traverse ensuite un <strong>capteur chromatique</strong>. Ce capteur réagit à la luminosité réfléchie par la pièce et renvoie une tension spécifique pour chaque couleur. Pour sécuriser la reconnaissance face aux variations de lumière, nous avons défini des plages de tolérance dans l'automate :</p>
-            <ul>
-                <li><strong>Pièce Blanche :</strong> Tension de 3,0 V à 5,0 V</li>
-                <li><strong>Pièce Rouge :</strong> Tension de 4,5 V à 5,5 V</li>
-                <li><strong>Pièce Bleue :</strong> Tension de 6,5 V à 7,5 V</li>
-            </ul>
-
-            <h3 style="font-size: 1.2rem; color: #003366; margin-top: 20px;">Algorithme de Suivi et Système de Sélection</h3>
-            <p>Une fois la couleur identifiée, le système doit savoir exactement quand déclencher le vérin correspondant pour pousser la pièce au bon moment dans son magasin. N'ayant pas de capteur devant chaque bac, nous avons programmé un <strong>système de comptage virtuel</strong> lié au déplacement physique du tapis.</p>
-            <p>Une <strong>came mécanique</strong> tourne en synchronisation avec le tapis. Pour obtenir une précision maximale sur la position de la pièce, l'automate compte chaque impulsion de la came sur les <strong>fronts montants ET descendants</strong> (changement d'état du signal). Dès que le compteur atteint la valeur mathématique associée au bac de la couleur détectée, le vérin s'active instantanément pour éjecter la pièce, finalisant ainsi le processus de tri sélectif.</p>
-        </section>
-
-        <!-- 3. SECTION GALERIE PHOTOS (DÉFILEMENT IMAGE PAR IMAGE UNIQUE) 📸 -->
-        <section class="info-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 25px;">
-            <h2><i class="fas fa-images"></i> Galerie de la maquette d'automatisme 📸</h2>
-            <p>Utilisez les flèches ou glissez l'image pour observer les composants du système :</p>
-            
-            <div style="position: relative; max-width: 600px; margin: 20px auto; overflow: hidden;">
-                <div id="auto-slider" style="display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; gap: 0; padding-bottom: 10px; -webkit-overflow-scrolling: touch;">
-                    
-                    <!-- Image 1 -->
-                    <div style="flex: 0 0 100%; scroll-snap-align: start; text-align: center; box-sizing: border-box; padding: 0 10px;">
-                        <img src="images/maquette-tapis.png" alt="Maquette globale du tapis roulant" style="width: 100%; height: 350px; object-fit: contain; background: #f9f9f9; border-radius: 8px; border: 1px solid #ddd;">
-                        <p style="margin-top: 10px; font-size: 1rem; color: #003366; font-weight: bold;">Vue d'ensemble de la Maquette de Tri ⚙️</p>
-                    </div>
-
-                    <!-- Image 2 -->
-                    <div style="flex: 0 0 100%; scroll-snap-align: start; text-align: center; box-sizing: border-box; padding: 0 10px;">
-                        <img src="images/capteurs.png" alt="Zoom sur la barrière lumineuse et le capteur chromatique" style="width: 100%; height: 350px; object-fit: contain; background: #f9f9f9; border-radius: 8px; border: 1px solid #ddd;">
-                        <p style="margin-top: 10px; font-size: 1rem; color: #003366; font-weight: bold;">Barrière Lumineuse & Capteur Chromatique 👁️</p>
-                    </div>
-
-                    <!-- Image 3 -->
-                    <div style="flex: 0 0 100%; scroll-snap-align: start; text-align: center; box-sizing: border-box; padding: 0 10px;">
-                        <img src="images/came-comptage.png" alt="Système de came pour le comptage des impulsions" style="width: 100%; height: 350px; object-fit: contain; background: #f9f9f9; border-radius: 8px; border: 1px solid #ddd;">
-                        <p style="margin-top: 10px; font-size: 1rem; color: #003366; font-weight: bold;">Came de Synchronisation (Fronts Hauts/Bas) ⏱️</p>
-                    </div>
-
-                </div>
-
-                <!-- Boutons Flèches -->
-                <button onclick="document.getElementById('auto-slider').scrollBy({left: -400, behavior: 'smooth'})" style="position: absolute; left: 15px; top: 45%; transform: translateY(-50%); background: rgba(0,51,102,0.8); color: white; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; z-index: 10;"><i class="fas fa-chevron-left"></i></button>
-                <button onclick="document.getElementById('auto-slider').scrollBy({left: 400, behavior: 'smooth'})" style="position: absolute; right: 15px; top: 45%; transform: translateY(-50%); background: rgba(0,51,102,0.8); color: white; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; z-index: 10;"><i class="fas fa-chevron-right"></i></button>
-            </div>
-            
-            <div style="text-align: center; color: #888; font-size: 0.85rem; margin-top: 5px;">
-                <i class="fas fa-arrows-left-right"></i> Glissez ou cliquez sur les flèches pour faire défiler
-            </div>
-        </section>
-
-        <!-- 4. APPRENTISSAGES CRITIQUES : CONCEVOIR 🎓 -->
-        <section class="info-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 25px; border-left: 5px solid #003366;">
-            <h3 style="color: #003366; margin-bottom: 15px;"><i class="fas fa-drafting-compass"></i> Apprentissages critiques : Concevoir 🎓</h3>
-            
-            <div style="background: #f0f7ff; padding: 15px; border-left: 4px solid #c5a059;">
-                <strong>Compétence : Développer une logique d'automatisme programmable</strong><br>
-                Conception et structuration de l'algorithme de tri sous forme de grafcet et de blocs logiques, en intégrant le traitement des signaux analogiques (tensions du capteur couleur) et la gestion fine du temps via des fenêtres de comptage d'impulsions.
-            </div>
-        </section>
-
-        <!-- 5. APPRENTISSAGES CRITIQUES : VÉRIFIER 🎓 -->
-        <section class="info-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 25px; border-left: 5px solid #e67e22;">
-            <h3 style="color: #e67e22; margin-bottom: 15px;"><i class="fas fa-check-circle"></i> Apprentissages critiques : Vérifier 🎓</h3>
-            
-            <div style="background: #fdfaf0; padding: 15px; border-left: 4px solid #e67e22; margin-bottom: 10px;">
-                <strong>Compétence : Calibration et échantillonnage de capteurs</strong><br>
-                Analyse des variations de tension émises par le capteur chromatique afin d'isoler des plages numériques stables (intervalles de tension) pour discriminer efficacement chaque couleur sans erreur de lecture.
-            </div>
-
-            <div style="background: #fdfaf0; padding: 15px; border-left: 4px solid #e67e22;">
-                <strong>Compétence : Diagnostic et optimisation algorithmique</strong><br>
-                Fiabilisation du suivi des pièces sur le tapis en remplaçant un comptage simple par une détection avancée sur fronts montants et descendants, maximisant la précision mécanique du déclenchement des vérins.
-            </div>
-        </section>
+    <!-- BARRE DE NAVIGATION -->
+    <div class="nav-bar">
+        <div>EMIR KOCATURK <a href="#" style="color: #c5a059; text-decoration: none; margin-left: 15px; font-size: 0.9rem;">Accueil 🏠</a> <a href="#" style="color: #c5a059; text-decoration: none; margin-left: 10px; font-size: 0.9rem;">Réalisations (SAÉ) 🛠️</a> <a href="#" style="color: #c5a059; text-decoration: none; margin-left: 10px; font-size: 0.9rem;">Ma Candidature 📝</a></div>
     </div>
-    
-    <style>
-        #auto-slider::-webkit-scrollbar {
-            display: none;
-        }
-        #auto-slider {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-    </style>
+
+    <div class="container">
+        
+        <div class="sae-container">
+            <!-- TITRE DE LA SAÉ -->
+            <div class="sae-title">Système de Tri Automatique sur Tapis Roulant ⚙️</div>
+
+            <!-- BLOC 1 : OBJECTIF & INTÉGRATION -->
+            <div class="block-title">1. OBJECTIF & INTÉGRATION 🎯</div>
+            <div class="block-content">
+                Programmer et configurer une ligne de production automatisée industrielle miniature. L'objectif est d'identifier, suivre et trier de manière sélective des pièces cylindriques en fonction de leur couleur (rouge, bleu, blanche) vers des bacs de stockage distincts, à l'aide de capteurs optiques et de vérins pneumatiques.
+            </div>
+
+            <!-- BLOC 2 : DÉROULEMENT & DÉFIS -->
+            <div class="block-title">2. DÉROULEMENT & DÉFIS 🛠️</div>
+            <div class="block-content">
+                <strong>Phase Matérielle : Analyse des Signaux et Capteurs</strong><br>
+                • <strong>Détection initiale :</strong> Raccordement de la barrière lumineuse en amont pour déclencher l'activation automatique du tapis roulant à sa tension nominale de 7,7 V.<br>
+                • <strong>Analyse analogique :</strong> Configuration du capteur chromatique pour mesurer la luminosité réfléchie par les pièces. Face aux fluctuations lumineuses du laboratoire, isolation de plages de tension stables dans le programme : pièces blanches (3,0V à 5,0V), pièces rouges (4,5V à 5,5V) et pièces bleues (6,5V à 7,5V).<br><br>
+                <strong>Phase Logicielle : Algorithme de Suivi et Précision</strong><br>
+                • <strong>Suivi de position :</strong> Implémentation d'un système de comptage virtuel lié au déplacement mécanique du tapis pour suivre la pièce sans ajouter de capteurs physiques devant chaque magasin.<br>
+                • <strong>Optimisation de la précision :</strong> Programmation d'une came de synchronisation sur les <strong>fronts montants et descendants</strong>. Cette double détection permet de doubler la précision du positionnement pour déclencher le vérin pousseur au millième de seconde près.
+            </div>
+
+            <!-- BLOC 3 : GALERIE DE CONCEPTION -->
+            <div class="block-title">3. GALERIE DE CONCEPTION 📸</div>
+            <div class="gallery-wrapper">
+                <button class="nav-btn btn-left" onclick="document.getElementById('thumb-slider').scrollBy({left: -200, behavior: 'smooth'})"><i class="fas fa-chevron-left"></i></button>
+                
+                <div class="gallery-container" id="thumb-slider">
+                    <!-- Image 1 -->
+                    <div class="gallery-item">
+                        <img src="images/maquette-tapis.png" alt="Maquette globale">
+                        <p>images/maquette.png</p>
+                    </div>
+
+            <!-- BLOC 4 : APPRENTISSAGES CRITIQUES (GEII) -->
+            <div class="block-title">4. APPRENTISSAGES CRITIQUES (GEII) 🎓</div>
+            <div class="block-content">
+                <strong>Concevoir :</strong> Développer une logique d'automatisme sous forme de Grafcet structuré, capable de traiter des signaux analogiques complexes et de gérer des fenêtres de temps restreintes pour les actionneurs.<br>
+                <strong>Vérifier :</strong> Échantillonner des plages de tension de capteurs en milieu réel et diagnostiquer un manque de précision mécanique en optimisant le code grâce à la détection sur fronts montants et descendants.
+            </div>
+        </div>
+
+    </div>
+
 </body>
 </html>
