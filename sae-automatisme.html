@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>SAÉ Automatisme - Emir Kocaturk</title>
+    <title>Système de Tri Automatique | Emir Kocaturk</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -23,50 +23,61 @@
 
     <div class="container sae-detail">
         <header class="sae-header-pro" style="text-align: center; margin-bottom: 40px; margin-top: 20px;">
-            <a href="projets.html" class="back-link" style="color: #c5a059; text-decoration: none; font-weight: bold;"><i class="fas fa-arrow-left"></i> Retour aux projets</a>
-            <h1 style="color: #003366; font-size: 2.3rem; margin-top: 10px;">SAÉ : Conception d'un Système de Tri Automatique ⚙️</h1>
+            <a href="projets.html" class="back-link"><i class="fas fa-arrow-left"></i> Retour aux projets</a>
+            <h1 style="color: #003366; font-size: 2.3rem; margin-top: 10px;">Système de Tri Automatique ⚙️</h1>
             <div style="height: 4px; width: 80px; background: #c5a059; margin: 15px auto;"></div>
         </header>
 
+        <!-- OBJECTIF -->
         <section class="info-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 25px; border-top: 5px solid #003366;">
-            <h2><i class="fas fa-bullseye"></i> Objectif du projet</h2>
-            <p>Programmer et configurer une ligne de production automatisée miniature capable d'identifier, de suivre et de trier des pièces cylindriques en fonction de leur couleur (rouge, bleu, blanche) vers des magasins de stockage distincts, à l'aide de capteurs optiques et de vérins pneumatiques.</p>
+            <h2><i class="fas fa-bullseye"></i> Objectif du projet 🎯</h2>
+            <p>Programmer et configurer une ligne de production automatisée miniature capable d'identifier, d'effectuer le suivi logique et de trier des pièces cylindriques selon leur couleur (rouge, bleue, blanche) vers des bacs d'éjection distincts, au moyen de capteurs optiques et d'actionneurs pneumatiques.</p>
         </section>
 
+        <!-- RESUME -->
         <section class="info-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 25px;">
-            <h2><i class="fas fa-list-check"></i> Résumé de la SAÉ</h2>
-            <p>Le cycle démarre lorsqu'une pièce coupe la <strong>barrière lumineuse en amont</strong>, déclenchant l'activation du tapis roulant à sa tension nominale de <strong>7,7 V</strong>. La pièce traverse ensuite un <strong>capteur chromatique</strong> qui réagit à la luminosité réfléchie et renvoie une tension spécifique pour chaque couleur. Pour sécuriser la reconnaissance face aux variations de lumière, nous avons échantillonné des plages de tolérance dans l'automate :</p>
-            <ul>
+            <h2><i class="fas fa-list-check"></i> Résumé de la SAÉ 📝</h2>
+            <p><strong>Détection et Traitement Analogique 🔬 :</strong> Le cycle débute au franchissement de la barrière lumineuse amont, activant le convoyeur à sa tension nominale de 7,7 V. La pièce défile sous un capteur chromatique mesurant l'intensité réfléchie et délivrant une tension analogique propre à chaque nuance. Pour fiabiliser la reconnaissance face aux variations de luminosité ambiante, des plages d'acquisition ont été définies dans l'automate :</p>
+            
+            <ul style="margin: 15px 0 15px 20px;">
                 <li><strong>Pièce Blanche :</strong> Tension de 3,0 V à 5,0 V</li>
                 <li><strong>Pièce Rouge :</strong> Tension de 4,5 V à 5,5 V</li>
                 <li><strong>Pièce Bleue :</strong> Tension de 6,5 V à 7,5 V</li>
             </ul>
-            <p>Pour pousser le vérin au bon moment sans ajouter de capteurs physiques devant chaque bac, nous avons programmé un <strong>système de comptage virtuel</strong> lié au déplacement du tapis. Une came tourne en synchronisation avec le tapis, et l'automate compte chaque impulsion sur les <strong>fronts montants et descendants</strong> pour doubler la précision du positionnement. Dès que le compteur atteint la valeur associée à la couleur détectée, le vérin s'active pour éjecter la pièce.</p>
+
+            <p><strong>Suivi de Position et Éjection Virtuelle ⚙️ :</strong> Afin d'éjecter la pièce avec précision sans démultiplier les capteurs physiques, un système de suivi par comptage d'impulsions a été implémenté. Une came solidaire du tapis génère des impulsions comptabilisées sur fronts montants et descendants par l'automate pour doubler la résolution de positionnement. Dès que la consigne de comptage correspondant à la couleur identifiée est atteinte, le vérin pneumatique associé est actionné pour l'éjection.</p>
         </section>
 
-        <!-- SECTION PHOTO FIXE UNIQUE -->
+        <!-- PHOTO FIXE UNIQUE -->
         <section class="info-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 25px;">
-            <h2><i class="fas fa-image"></i> Aperçu du système</h2>
-            <div style="max-width: 500px; margin: 20px auto; text-align: center; border: 1px solid #ddd; padding: 8px; background: #fafafa; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
-                <img src="images/maquette-tapis.png" alt="Maquette du Tapis de Tri Automatique" style="width: 100%; height: auto; max-height: 300px; object-fit: contain; border-radius: 4px; background: white;">
-                <p style="margin: 8px 0 0 0; font-size: 0.8rem; color: #666; font-weight: bold; font-family: monospace;">images/maquette-tapis.png</p>
+            <h2><i class="fas fa-camera"></i> Aperçu du système 📸</h2>
+            <div style="max-width: 500px; margin: 20px auto; text-align: center; border: 1px solid #e2e8f0; padding: 12px; background: #ffffff; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                <img src="images/maquette-tapis.png" alt="Maquette du Tapis de Tri Automatique" style="width: 100%; height: auto; max-height: 300px; object-fit: contain; border-radius: 6px; display: block; margin: 0 auto;">
+                <p style="margin: 10px 0 0 0; font-size: 0.85rem; color: #003366; font-weight: bold;">Ligne de tri automatique et système pneumatique</p>
             </div>
         </section>
 
-        <!-- APPRENTISSAGES CRITIQUES REVISITÉS AVEC LES BONS INTITULÉS DE COMPÉTENCES -->
+        <!-- BILAN -->
+        <section class="info-card" style="background: #003366; color: white; padding: 25px; border-radius: 12px; margin-bottom: 25px;">
+            <h2 style="color: #c5a059;"><i class="fas fa-award"></i> Bilan 🏆</h2>
+            <p>Cette SAÉ a concrétisé la mise en œuvre d'une chaîne d'automatisme complète. Elle m'a permis de maîtriser l'acquisition de grandeurs analogiques, l'encodage de cycles sous Grafcet et le suivi précis de produits en défilement sur une ligne industrielle. ✅</p>
+        </section>
+
+        <!-- COMPETENCES : CONCEVOIR -->
         <section class="info-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 25px; border-left: 5px solid #003366;">
-            <h3 style="color: #003366; margin-bottom: 15px;"><i class="fas fa-drafting-compass"></i> Apprentissages critiques : Concevoir 🎓</h3>
+            <h3 style="color: #003366; margin-bottom: 15px;"><i class="fas fa-graduation-cap"></i> Apprentissages critiques : Concevoir 🎓</h3>
             <div style="background: #f0f7ff; padding: 15px; border-left: 4px solid #c5a059;">
                 <strong>Compétence : Concevoir la partie commande d'un système d'automatisme industriel</strong><br>
-                Développement, structuration et encodage de la logique séquentielle sous forme de Grafcet (langage SFC/Ladder) sur l'automate Schneider, incluant la gestion temporelle et l'acquisition des signaux du système.
+                Développement, structuration et encodage de la logique séquentielle sous forme de Grafcet (langages SFC / Ladder) sur automate Schneider, incluant la synchronisation temporelle, le comptage d'impulsions et la gestion des sorties pneumatiques.
             </div>
         </section>
 
+        <!-- COMPETENCES : VERIFIER -->
         <section class="info-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 25px; border-left: 5px solid #e67e22;">
             <h3 style="color: #e67e22; margin-bottom: 15px;"><i class="fas fa-check-circle"></i> Apprentissages critiques : Vérifier 🎓</h3>
             <div style="background: #fdfaf0; padding: 15px; border-left: 4px solid #e67e22;">
                 <strong>Compétence : Vérifier les performances d'une chaîne de mesure analogique</strong><br>
-                Étalonnage du capteur de couleur industriel, échantillonnage des seuils de tension réfléchie et traitement numérique des fenêtres de tolérance dans l'automate pour éliminer les erreurs de tri liées à la lumière ambiante.
+                Étalonnage du capteur couleur industriel, échantillonnage des seuils de tension réfléchie et programmation de fenêtres de tolérance au sein de l'automate pour fiabiliser le tri face aux variations parasitaires de lumière.
             </div>
         </section>
         
