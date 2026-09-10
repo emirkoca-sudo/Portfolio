@@ -16,7 +16,7 @@
         }
         .pdf-viewer {
             width: 100%;
-            height: 800px; /* Augmenté pour une meilleure lecture au centre */
+            height: 800px;
             border: 1px solid #ddd;
             border-radius: 8px;
             overflow: hidden;
@@ -25,7 +25,11 @@
 </head>
 <body>
     <nav>
-        <div class="logo">EMIR KOCATURK</div>
+        <div class="logo">
+            <a href="index.html" style="color: white; text-decoration: none;">
+                <i class="fas fa-home"></i> EMIR KOCATURK
+            </a>
+        </div>
         <ul>
             <li><a href="index.html">Accueil 🏠</a></li>
             <li><a href="projets.html">Réalisations (SAÉ) 🛠</a></li>
@@ -37,8 +41,8 @@
         <div class="hero-container">
             <div class="header-content">
                 <div class="badge-iut">Documents Professionnels</div>
-                <h1>Mon Curriculum Vitae</h1>
-                <p>Découvrez mon parcours et mes compétences en GEII.</p>
+                <h1>Mon Curriculum Vitae & Candidature</h1>
+                <p>Découvrez mon parcours et mes compétences en Électronique & Systèmes Embarqués.</p>
             </div>
         </div>
     </header>
@@ -46,6 +50,7 @@
     <section class="container">
         <div class="central-container">
             
+            <!-- BLOC CV PDF -->
             <div class="skill-category">
                 <h2 class="section-title" style="text-align: center; margin-bottom: 17px;">
                     <i class="fas fa-user-tie"></i> Curriculum Vitae
@@ -54,54 +59,63 @@
                     <embed src="fichiers/cv.pdf" type="application/pdf" width="100%" height="100%" />
                 </div>
                 <p style="text-align: center; margin-top: 15px;">
-                    <a href="fichiers/cv.pdf" target="_blank" class="soft-tag" style="background:#2c3e50; color:white; text-decoration:none; display: inline-block;">
-                        <i class="fas fa-download"></i> Télécharger le PDF
+                    <a href="fichiers/cv.pdf" target="_blank" class="soft-tag" style="background:#003366; color:white; text-decoration:none; display: inline-block;">
+                        <i class="fas fa-download"></i> Télécharger le CV (PDF)
                     </a>
                 </p>
             </div>
 
-	 <div class="central-container">
-            
+            <!-- BLOC LETTRE DE MOTIVATION PDF -->
             <div class="skill-category">
                 <h2 class="section-title" style="text-align: center; margin-bottom: 23px;">
-                    <i class="fas fa-user-tie"></i> Lettre de Motivation
+                    <i class="fas fa-file-alt"></i> Lettre de Motivation
                 </h2>
                 <div class="pdf-viewer">
                     <embed src="fichiers/LM.pdf" type="application/pdf" width="100%" height="100%" />
                 </div>
                 <p style="text-align: center; margin-top: 15px;">
-                    <a href="fichiers/LM.pdf" target="_blank" class="soft-tag" style="background:#2c3e50; color:white; text-decoration:none; display: inline-block;">
-                        <i class="fas fa-download"></i> Télécharger le PDF
+                    <a href="fichiers/LM.pdf" target="_blank" class="soft-tag" style="background:#003366; color:white; text-decoration:none; display: inline-block;">
+                        <i class="fas fa-download"></i> Télécharger la Lettre (PDF)
                     </a>
                 </p>
             </div>
 
+            <!-- BLOC RECHERCHE DE STAGE -->
             <div class="skill-category">
-                <h3><i class="fas fa-search-location"></i> Recherche de Stage</h3>
+                <h3><i class="fas fa-search-location"></i> Recherche de Stage BUT 2</h3>
                 <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 20px;">
                     <div>
-                        <p><strong>Période :</strong> Janvier 2027 (8 semaines)</p>
-                        <p><strong>Domaines :</strong> Automatisme, Électronique, Énergie.</p>
-                        <p><strong>Mobilité :</strong> Ile de France / Aube</p>
+                        <p><strong>Période :</strong> 11 janvier au 5 mars 2027 (8 semaines)</p>
+                        <p><strong>Domaine :</strong> Électronique & Systèmes Embarqués (ESE)</p>
+                        <p><strong>Mobilité :</strong> Île-de-France / Aube et environs</p>
                     </div>
                     <div class="software-tags">
                         <a href="https://www.linkedin.com/in/emir-kocaturk-189406390/" target="_blank" class="soft-tag" style="background:#0077b5; color:white; text-decoration:none;">
-                            <i class="fab fa-linkedin"></i> LinkedIn
+                            <i class="fab fa-linkedin"></i> Profil LinkedIn
                         </a>
                     </div>
                 </div>
             </div>
 
+            <!-- BLOC FORMULAIRE DE CONTACT DIRECT VIA EMAIL -->
             <div class="skill-category">
                 <h3><i class="fas fa-paper-plane"></i> Me contacter directement</h3>
-                <form style="display: grid; gap: 12px; margin-top: 15px;">
-                    <div style="display: flex; gap: 10px;">
-                        <input type="text" placeholder="Nom complet" required style="flex: 1; padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
-                        <input type="email" placeholder="Votre adresse email" required style="flex: 1; padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
+                <p style="font-size: 0.9rem; color: #555; margin-bottom: 15px;">
+                    Envoyez-moi un message ci-dessous. Il me sera directement transmis sur ma boîte e-mail personnelle.
+                </p>
+                
+                <!-- Remplace 'TON_ID_FORMSPREE' par la clé gratuite de ton compte Formspree.io pour activer la réception -->
+                <form action="https://formspree.io/f/TON_ID_FORMSPREE" method="POST" style="display: grid; gap: 12px;">
+                    <input type="hidden" name="_to" value="kocaturkemir0@gmail.com">
+                    
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                        <input type="text" name="name" placeholder="Nom complet / Entreprise" required style="flex: 1; min-width: 200px; padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
+                        <input type="email" name="email" placeholder="Votre adresse e-mail" required style="flex: 1; min-width: 200px; padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
                     </div>
-                    <input type="text" placeholder="Objet de votre message" style="padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
-                    <textarea placeholder="Votre message..." rows="5" required style="padding: 10px; border-radius: 5px; border: 1px solid #ddd; resize: vertical;"></textarea>
-                    <button type="submit" class="soft-tag" style="background:#2c3e50; color:white; border:none; cursor:pointer; padding: 12px; font-weight: bold; width: fit-content;">
+                    <input type="text" name="subject" placeholder="Objet de votre message" required style="padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
+                    <textarea name="message" placeholder="Rédigez votre message ici..." rows="5" required style="padding: 10px; border-radius: 5px; border: 1px solid #ddd; resize: vertical; font-family: inherit;"></textarea>
+                    
+                    <button type="submit" class="soft-tag" style="background:#003366; color:white; border:none; cursor:pointer; padding: 12px 20px; font-weight: bold; width: fit-content;">
                         <i class="fas fa-paper-plane"></i> Envoyer le message
                     </button>
                 </form>
