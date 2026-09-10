@@ -1,133 +1,78 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emir Kocaturk | Portfolio Expert GEII</title>
-    <!-- CSS Principal -->
-    <link rel="stylesheet" href="style.css">
-    <!-- Police Google Modern & FontAwesome Icons -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
+<!-- SECTION CAO & SIMULATION (NETTOYÉE) -->
+<div class="skill-category">
+    <h3><i class="fas fa-desktop"></i> CAO, Simulation & Outils Métier</h3>
+    <div class="software-tags">
+        <span class="soft-tag">KiCad</span>
+        <span class="soft-tag">SimulIDE</span>
+        <span class="soft-tag">LTSpice</span>
+        <span class="soft-tag">Canva</span>
+    </div>
+</div>
 
-    <!-- BARRE DE NAVIGATION -->
-    <nav>
-        <div class="logo">Emir Kocaturk</div>
-        <ul>
-            <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
-            <li><a href="projets.html"><i class="fas fa-tools"></i> Réalisations (SAÉ)</a></li>
-            <li><a href="cv.html"><i class="fas fa-file-alt"></i> Ma Candidature</a></li>
-        </ul>
-    </nav>
-
-    <!-- HEADER / HERO SECTION -->
-    <header id="hero-pro">
-        <div class="hero-container">
-            <div class="header-logo side-logo">
-                <img src="images/logo_iut_troyes.png" alt="Logo IUT Troyes">
-            </div>
-
-            <div class="header-content">
-                <div class="badge-iut">IUT de Troyes - URCA</div>
-                <h1>Emir Kocaturk</h1>
-                <p>Étudiant en BUT Génie Électrique et Informatique Industrielle</p>
-                <div class="tags-skills">Électronique • Automatisme • Programmation • Énergie</div>
-            </div>
-
-            <div class="header-logo side-logo">
-                <img src="images/logo_geii.png" alt="Logo GEII">
-            </div>
-        </div>
-    </header>
-
-    <!-- SECTION DOMAINES D'EXPERTISE -->
-    <main class="container">
-        <h2 class="section-title"><i class="fas fa-layer-group"></i> Domaines d'Expertise</h2>
-         
-        <div class="skills-grid">
-            <!-- 1. ÉLECTRONIQUE -->
-            <div class="skill-category">
-                <h3><i class="fas fa-bolt"></i> Électronique & Énergie</h3>
-                <ul>
-                    <li>Mesures électriques (Oscilloscope, Multimètre)</li>
-                    <li>Circuits électroniques analogiques et numériques</li>
-                    <li>Notions en électrotechnique</li>
-                    <li>Conception de PCB (KiCad) et soudure</li>
-                </ul>
-            </div>
-
-            <!-- 2. PROGRAMMATION -->
-            <div class="skill-category">
-                <h3><i class="fas fa-code"></i> Programmation</h3>
-                <ul>
-                    <li>Langages C++ et C (Qt Creator, pigpio)</li>
-                    <li>Environnement Arduino et microcontrôleurs</li>
-                    <li>Algorithmique et structures de données</li>
-                </ul>
-            </div>
-
-            <!-- 3. AUTOMATISME -->
-            <div class="skill-category">
-                <h3><i class="fas fa-robot"></i> Automatisme</h3>
-                <ul>
-                    <li>Logique combinatoire et séquentielle (Grafcet)</li>
-                    <li>Utilisation des automates programmables (M340, M221)</li>
-                    <li>Unity Pro, Twido, EcoStruxure Machine Expert</li>
-                </ul>
-            </div>
-
-            <!-- 4. CAO & SIMULATION -->
-            <div class="skill-category">
-                <h3><i class="fas fa-desktop"></i> CAO & Simulation / Bureautique</h3>
-                <div class="software-tags">
-                    <span class="soft-tag">KiCad</span>
-                    <span class="soft-tag">SimulIDE</span>
-                    <span class="soft-tag">LTSpice</span>
-                    <span class="soft-tag">Pack Office</span>
-                    <span class="soft-tag">Canva</span>
-                    <span class="soft-tag">Google Workspace</span>
-                </div>
-            </div>
-
-            <!-- 5. RÉFÉRENTIEL COMPÉTENCES GEII -->
-            <div class="skill-category full-width">
-                <h3><i class="fas fa-graduation-cap"></i> Compétences Validées</h3>
-                <div style="width: 100%; max-width: 900px; margin: auto; padding: 10px; background: white; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.08);">
-                    <img src="images/APP.png" alt="Référentiel Compétences GEII" style="width: 100%; height: auto; display: block; border-radius: 4px;">
-                </div>
-            </div>
-        </div>
-
-        <!-- SECTION DES COMPÉTENCES / SAÉ EN COURS -->
-        <section class="sae-links-container">
-            <p class="sae-links-title">Mes Compétences en cours de validation (SAÉ) :</p>
-            
-            <div class="sae-links-grid">
-                <a href="sae-shield.html" class="sae-link-item">
-                    <span>→ Concevoir : Shield Arduino</span> <span>🛡️</span>
-                </a>
-                <a href="sae-multimetre.html" class="sae-link-item">
-                    <span>→ Concevoir : Multimètre Numérique</span> <span>⚡</span>
-                </a>
-                <a href="sae-temperature.html" class="sae-link-item">
-                    <span>→ Concevoir / Vérifier : Régulation de Température</span> <span>🌡️</span>
-                </a>
-                <a href="sae-robot.html" class="sae-link-item">
-                    <span>→ Vérifier : Robot Suiveur de Ligne et de Mur</span> <span>🤖</span>
-                </a>
-                <a href="sae-armoire.html" class="sae-link-item">
-                    <span>→ Assurer la Sécurité : Armoire Électrique Industrielle</span> <span>⚡</span>
-                </a>
-                <a href="sae-automatisme.html" class="sae-link-item">
-                    <span>→ Concevoir / Vérifier : Système de Tri Automatique</span> <span>⚙️</span>
-                </a>
-            </div>
-        </section>
-    </main>
-
-</body>
-</html>
+<!-- SECTION SÉLECTION DES SAÉ (TABLEAU INTERACTIF MODERNISÉ) -->
+<section class="container" style="margin-top: 50px;">
+    <h2 class="section-title"><i class="fas fa-tasks"></i> Accès Direct aux Réalisations (SAÉ)</h2>
+    
+    <div style="overflow-x: auto; background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); border: 1px solid #e2e8f0; margin-top: 20px;">
+        <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.95rem;">
+            <thead>
+                <tr style="background: #003366; color: white;">
+                    <th style="padding: 15px 20px;">Projet (SAÉ)</th>
+                    <th style="padding: 15px 20px;">Domaine Technique</th>
+                    <th style="padding: 15px 20px;">Compétence Clé</th>
+                    <th style="padding: 15px 20px; text-align: center;">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 15px 20px; font-weight: bold; color: #003366;">🛡️ Shield Arduino Nano</td>
+                    <td style="padding: 15px 20px;">Électronique & Embarqué</td>
+                    <td style="padding: 15px 20px;">Concevoir & Prototyper</td>
+                    <td style="padding: 15px 20px; text-align: center;">
+                        <a href="sae-shield.html" style="background: #003366; color: white; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.85rem;">Voir le projet <i class="fas fa-arrow-right"></i></a>
+                    </td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee; background: #fcfcfc;">
+                    <td style="padding: 15px 20px; font-weight: bold; color: #003366;">⚡ Multimètre Numérique</td>
+                    <td style="padding: 15px 20px;">Instrumentation & Mesure</td>
+                    <td style="padding: 15px 20px;">Concevoir & Tester</td>
+                    <td style="padding: 15px 20px; text-align: center;">
+                        <a href="sae-multimetre.html" style="background: #003366; color: white; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.85rem;">Voir le projet <i class="fas fa-arrow-right"></i></a>
+                    </td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 15px 20px; font-weight: bold; color: #003366;">🌡️ Régulation de Température</td>
+                    <td style="padding: 15px 20px;">Automatique & Asservissement</td>
+                    <td style="padding: 15px 20px;">Concevoir & Vérifier</td>
+                    <td style="padding: 15px 20px; text-align: center;">
+                        <a href="sae-temperature.html" style="background: #003366; color: white; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.85rem;">Voir le projet <i class="fas fa-arrow-right"></i></a>
+                    </td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee; background: #fcfcfc;">
+                    <td style="padding: 15px 20px; font-weight: bold; color: #003366;">🤖 Robot Suiveur de Ligne / Mur</td>
+                    <td style="padding: 15px 20px;">Robotique & Programmation C++</td>
+                    <td style="padding: 15px 20px;">Vérifier & Valider</td>
+                    <td style="padding: 15px 20px; text-align: center;">
+                        <a href="sae-robot.html" style="background: #003366; color: white; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.85rem;">Voir le projet <i class="fas fa-arrow-right"></i></a>
+                    </td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 15px 20px; font-weight: bold; color: #003366;">⚡ Armoire Électrique Industrielle</td>
+                    <td style="padding: 15px 20px;">Distribution d'Énergie & Sécurité</td>
+                    <td style="padding: 15px 20px;">Assurer la Sécurité</td>
+                    <td style="padding: 15px 20px; text-align: center;">
+                        <a href="sae-armoire.html" style="background: #003366; color: white; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.85rem;">Voir le projet <i class="fas fa-arrow-right"></i></a>
+                    </td>
+                </tr>
+                <tr style="background: #fcfcfc;">
+                    <td style="padding: 15px 20px; font-weight: bold; color: #003366;">⚙️ Système de Tri Automatique</td>
+                    <td style="padding: 15px 20px;">Automatisme Industriel & Grafcet</td>
+                    <td style="padding: 15px 20px;">Concevoir & Vérifier</td>
+                    <td style="padding: 15px 20px; text-align: center;">
+                        <a href="sae-automatisme.html" style="background: #003366; color: white; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.85rem;">Voir le projet <i class="fas fa-arrow-right"></i></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
