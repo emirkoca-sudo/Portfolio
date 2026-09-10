@@ -1,5 +1,5 @@
 /* ==========================================================
-   PORTFOLIO EXPERT GEII - STYLE CLAIR & ELEGANT (ECO FENETRE STYLE)
+   PORTFOLIO EXPERT GEII - STYLE CLAIR & FOND TECH DISCRET
    ========================================================== */
 
 :root {
@@ -20,12 +20,14 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--dark-text);
     line-height: 1.6;
-    background-color: var(--light-bg);
-    /* Image propre en fond, fixe et très atténuée */
-    background-image: linear-gradient(rgba(248, 250, 252, 0.92), rgba(248, 250, 252, 0.92)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1920&auto=format&fit=crop');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-color: #f4f7f6;
+    
+    /* FOND CLAIR DYNAMIQUE : QUADRILLAGE TECHNIQUE SUBTIL EN FILIGRANE */
+    background-image: 
+        radial-gradient(circle at 50% 0%, rgba(0, 51, 102, 0.05) 0%, transparent 70%),
+        linear-gradient(rgba(0, 51, 102, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 51, 102, 0.03) 1px, transparent 1px);
+    background-size: 100% 100%, 30px 30px, 30px 30px;
     background-attachment: fixed;
     min-height: 100vh;
 }
@@ -108,7 +110,7 @@ nav ul li a:hover {
     margin-top: 10px;
 }
 
-/* STRUCTURE ET CARTES */
+/* STRUCTURE ET CARTES DE FOND BLANC */
 .container {
     max-width: 1000px;
     margin: 40px auto;
