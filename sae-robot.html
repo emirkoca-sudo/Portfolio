@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Robot Suiveur de Ligne et de Mur | Emir Kocaturk</title>
+    <title>Robot Mobile Autonome | Emir Kocaturk</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -22,39 +22,37 @@
 
     <div class="container sae-detail">
         <header class="sae-header-pro" style="text-align: center; margin-bottom: 40px; margin-top: 20px;">
-            <a href="projets.html" class="back-link" style="color: #c5a059; text-decoration: none; font-weight: bold;"><i class="fas fa-arrow-left"></i> Retour aux projets</a>
+            <a href="projets.html" class="back-link"><i class="fas fa-arrow-left"></i> Retour aux projets</a>
             <h1 style="color: #003366; font-size: 2.5rem; margin-top: 10px;">Robot Suiveur de Ligne et de Mur 🤖</h1>
             <div style="height: 4px; width: 80px; background: #c5a059; margin: 15px auto;"></div>
         </header>
 
         <section class="info-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 25px; border-top: 5px solid #003366;">
             <h2><i class="fas fa-bullseye"></i> Objectif du projet 🎯</h2>
-            <p>Concevoir, fabriquer et programmer un robot mobile autonome complexe capable de naviguer sur un circuit combinant un suivi de ligne au sol, la gestion d'intersections spécifiques, et une transition automatique vers un suivi de mur (LiDAR) en cas de disparition du marquage noir, tout en assurant l'évitement d'obstacles frontaux.</p>
-            <p>Ce projet collaboratif a nécessité une imbrication forte entre le développement matériel (routage KiCad et fabrication de cartes de puissance) et logiciel (programmation d'une machine à états finis sous Arduino).</p>
+            <p>Concevoir, fabriquer et programmer un robot mobile autonome capable de naviguer sur un parcours complexe combinant le suivi d'une ligne au sol, la gestion d'intersections et la transition automatique vers un suivi de mur par capteurs LiDAR, tout en assurant l'évitement d'obstacles frontaux.</p>
+            <p>Ce projet collaboratif a permis de lier étroitement la conception matérielle (routage sous KiCad, fabrication de cartes de puissance) et le développement logiciel (machine à états finis sous Arduino C++).</p>
         </section>
 
         <section class="info-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 25px;">
             <h2><i class="fas fa-list-check"></i> Résumé de la SAÉ 📝</h2>
             
-            <h3 style="font-size: 1.2rem; color: #003366; margin-top: 10px;">Phase Matérielle : Conception et Fabrication</h3>
-            <p><strong>Étude théorique et Schéma :</strong> Les moteurs ne pouvant être alimentés en puissance par l'Arduino, j'ai étudié et implémenté l'intégration de deux drivers de puissance VNH7070 (un par moteur) pour faire l'interface entre la commande et la puissance. Un premier croquis manuel a validé l'architecture.</p>
-            <p><strong>Routage KiCad et PCB :</strong> J'ai réalisé la modélisation complète sur KiCad, placé les connecteurs moteurs et Arduino, puis généré le PCB et sa vue 3D.</p>
-            <p><strong>Fabrication physique :</strong> La fabrication a suivi un protocole industriel strict : 
-                <em>insolation UV</em>, <em>révélation en bain</em>, <em>gravure chimique</em>, et <em>déstripage</em> de la résine. L'assemblage s'est fait par insertion de fils pour la continuité des vias double face, application de pâte à braser à la seringue pour les empreintes CMS VNH7070, passage au four de refusion, et soudures manuelles des connecteurs.
-            </p>
+            <h3 style="font-size: 1.2rem; color: #003366; margin-top: 10px;">Phase Matérielle : Conception et Fabrication 🛠️</h3>
+            <p><strong>Étude Théorique et Schématique :</strong> Étude et intégration de deux hacheurs/drivers de puissance VNH7070 (un par moteur) afin d'interfacer la partie commande Arduino avec la partie puissance des moteurs à courant continu.</p>
+            <p><strong>Routage KiCad et PCB :</strong> Saisie du schéma structurel et routage optimisé de la carte de puissance sous KiCad, placement des connecteurs d'E/S et génération des fichiers de fabrication 3D.</p>
+            <p><strong>Fabrication Physique du PCB :</strong> Réalisation suivant un procédé industriel strict : insolation UV, révélation en bain chimique, gravure au perchlorure de fer et déstripage. Assemblage par brasage CMS au four de refusion pour le composant VNH7070 et soudures manuelles des connecteurs traversants.</p>
 
-            <h3 style="font-size: 1.2rem; color: #003366; margin-top: 20px;">Phase Logicielle : Programmation et Algorithmique</h3>
-            <p><strong>Contrôle moteurs :</strong> Développement des fonctions de bas niveau pour gérer le sens de rotation (broches logiques INA/INB) et la vitesse (signaux PWM/MLI) des moteurs.</p>
-            <p><strong>Suivi de mur par LiDARs :</strong> Intégration de deux capteurs VL53L1X isolés sur le bus I2C via leurs broches XSHUT pour modifier leurs adresses. Implémentation d'un contrôle proportionnel pour adapter la trajectoire le long du mur via l'équation affine mathématique : <code>correction = (-0.12 * distanceMur) + 26</code>, assurant une correction fluide plutôt que par à-coups.</p>
-            <p><strong>Machine à états et Interface :</strong> Structuration globale sous forme de machine à états pour basculer de mode à chaque appui sur un bouton physique, associée à un retour visuel sur un bandeau de LED NeoPixel (rose pour le suivi de mur, bleu ciel pour la sécurité obstacle avant à 15 cm, violet pour l'arrêt sur ligne, et un affichage tricolore de la jauge batterie).</p>
-            <p><strong>Intersections et Intégration Finale :</strong> Programmation du comptage des marques noires latérales via le moniteur série pour valider les décisions de virage à l'intersection. Gestion complexe de l'enchaînement des comportements (suivi de ligne ➔ détection de marque et virage ➔ perte de ligne et bascule automatique sur suivi de mur LiDAR ➔ détection et récupération de la ligne noire pour reprendre le suivi au sol).</p>
+            <h3 style="font-size: 1.2rem; color: #003366; margin-top: 20px;">Phase Logicielle : Algorithmique et Contrôle 💻</h3>
+            <p><strong>Commande Moteurs :</strong> Développement de fonctions de bas niveau pour gérer la direction (broches INA/INB) et la vitesse des moteurs par signaux PWM / MLI.</p>
+            <p><strong>Télémétrie LiDAR & Correction de Trajectoire :</strong> Intégration de deux capteurs temps de vol VL53L1X isolés sur le bus I2C via leurs broches XSHUT. Implémentation d'une loi de commande proportionnelle pour adapter la trajectoire le long des parois : <code>correction = (-0.12 * distanceMur) + 26</code>, garantissant une régulation fluide.</p>
+            <p><strong>Machine à États & Interface :</strong> Architecture logicielle structurée autour d'une machine à états gérant la navigation et le retour visuel sur un bandeau de LED NeoPixel (rose pour le suivi de mur, bleu pour la sécurité d'obstacle avant à 15 cm, violet pour l'arrêt et jauge batterie tricolore).</p>
+            <p><strong>Enchaînement et Navigation Autonome :</strong> Comptage des repères optiques au sol pour valider les décisions aux intersections et transition automatique entre les modes (suivi de ligne ➔ détection de marquage ➔ contournement LiDAR ➔ réacquisition de la ligne noire).</p>
         </section>
 
         <section class="info-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 25px;">
-            <h2><i class="fas fa-images"></i> Galerie de conception et fabrication 📸</h2>
-            <p>Utilisez les flèches ou glissez l'image pour voir les étapes une par une :</p>
+            <h2><i class="fas fa-camera"></i> Galerie Photos 📸</h2>
+            <p style="margin-bottom: 15px;">Aperçu des étapes de conception, du routage et des essais sur piste :</p>
             
-            <div style="position: relative; max-width: 600px; margin: 20px auto; overflow: hidden;">
+            <div style="position: relative; max-width: 650px; margin: 20px auto; overflow: hidden;">
                 <div id="robot-slider" style="display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; gap: 0; padding-bottom: 10px; -webkit-overflow-scrolling: touch;">
                     
                     <div style="flex: 0 0 100%; scroll-snap-align: start; text-align: center; box-sizing: border-box; padding: 0 10px;">
@@ -74,17 +72,17 @@
 
                     <div style="flex: 0 0 100%; scroll-snap-align: start; text-align: center; box-sizing: border-box; padding: 0 10px;">
                         <img src="images/robot.png" alt="Photo du robot 1" style="width: 100%; height: 350px; object-fit: contain; background: #f9f9f9; border-radius: 8px; border: 1px solid #ddd;">
-                        <p style="margin-top: 10px; font-size: 1rem; color: #003366; font-weight: bold;">Châssis & Moteurs 🤖</p>
+                        <p style="margin-top: 10px; font-size: 1rem; color: #003366; font-weight: bold;">Châssis & Integration Moteurs 🤖</p>
                     </div>
 
                     <div style="flex: 0 0 100%; scroll-snap-align: start; text-align: center; box-sizing: border-box; padding: 0 10px;">
                         <img src="images/robot2.png" alt="Photo du robot 2" style="width: 100%; height: 350px; object-fit: contain; background: #f9f9f9; border-radius: 8px; border: 1px solid #ddd;">
-                        <p style="margin-top: 10px; font-size: 1rem; color: #003366; font-weight: bold;">Câblage des Drivers 🛠️</p>
+                        <p style="margin-top: 10px; font-size: 1rem; color: #003366; font-weight: bold;">Câblage de la Carte de Puissance 🛠️</p>
                     </div>
 
                     <div style="flex: 0 0 100%; scroll-snap-align: start; text-align: center; box-sizing: border-box; padding: 0 10px;">
                         <img src="images/robot3.png" alt="Photo du robot 3" style="width: 100%; height: 350px; object-fit: contain; background: #f9f9f9; border-radius: 8px; border: 1px solid #ddd;">
-                        <p style="margin-top: 10px; font-size: 1rem; color: #003366; font-weight: bold;">Tests des Capteurs LiDAR ⚡</p>
+                        <p style="margin-top: 10px; font-size: 1rem; color: #003366; font-weight: bold;">Tests des Capteurs Télémétriques LiDAR ⚡</p>
                     </div>
 
                     <div style="flex: 0 0 100%; scroll-snap-align: start; text-align: center; box-sizing: border-box; padding: 0 10px;">
@@ -94,29 +92,39 @@
 
                 </div>
 
-                <button onclick="document.getElementById('robot-slider').scrollBy({left: -400, behavior: 'smooth'})" style="position: absolute; left: 15px; top: 45%; transform: translateY(-50%); background: rgba(0,51,102,0.8); color: white; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; z-index: 10;"><i class="fas fa-chevron-left"></i></button>
-                <button onclick="document.getElementById('robot-slider').scrollBy({left: 400, behavior: 'smooth'})" style="position: absolute; right: 15px; top: 45%; transform: translateY(-50%); background: rgba(0,51,102,0.8); color: white; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; z-index: 10;"><i class="fas fa-chevron-right"></i></button>
+                <button onclick="document.getElementById('robot-slider').scrollBy({left: -400, behavior: 'smooth'})" style="position: absolute; left: 10px; top: 45%; transform: translateY(-50%); background: rgba(0,51,102,0.85); color: white; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; z-index: 10;"><i class="fas fa-chevron-left"></i></button>
+                <button onclick="document.getElementById('robot-slider').scrollBy({left: 400, behavior: 'smooth'})" style="position: absolute; right: 10px; top: 45%; transform: translateY(-50%); background: rgba(0,51,102,0.85); color: white; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; z-index: 10;"><i class="fas fa-chevron-right"></i></button>
             </div>
             
-            <div style="text-align: center; color: #888; font-size: 0.85rem; margin-top: 5px;">
-                <i class="fas fa-arrows-left-right"></i> Glissez ou cliquez sur les flèches pour faire défiler
+            <div style="text-align: center; color: #666; font-size: 0.85rem; margin-top: 5px;">
+                <i class="fas fa-arrows-left-right"></i> Utilisez les flèches ou faites défiler pour parcourir les images
             </div>
         </section>
 
-        <section class="info-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 25px; border-left: 5px solid #003366;">
+        <section class="info-card" style="background: #003366; color: white; padding: 25px; border-radius: 12px; margin-bottom: 25px;">
+            <h2 style="color: #c5a059;"><i class="fas fa-award"></i> Bilan 🏆</h2>
+            <p>Ce projet complet a permis de combiner la fabrication électronique lourde (chimie et CMS) avec de l'algorithmique complexe. L'aboutissement sur piste a validé la robustesse du matériel et la précision de la régulation de trajectoire. ✅</p>
+        </section>
+
+        <section class="info-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 25px;">
             <h3 style="color: #003366; margin-bottom: 15px;"><i class="fas fa-graduation-cap"></i> Apprentissages critiques : Concevoir 🎓</h3>
-            <div style="background: #f0f7ff; padding: 15px; border-left: 4px solid #c5a059; margin-bottom: 10px;">
-                <strong>AC11.01 | Analyse fonctionnelle d’un système :</strong> J'ai découpé l'architecture du robot en fonctions distinctes (alimentation de puissance autonome, pilotage en pont en H via VNH7070, bus de communication I2C pour les LiDARs, et captation optique pour le suivi au sol).
-            </div>
-            <div style="background: #f0f7ff; padding: 15px; border-left: 4px solid #c5a059; margin-bottom: 10px;">
-                <strong>AC11.02 | Réalisation de prototypes :</strong> J'ai réalisé l'intégralité du processus de fabrication du PCB (chimie et brasage CMS au four) et structuré un code modulaire organisé en fonctions de mouvements et en machine à états finis.
-            </div>
-            <div style="background: #f0f7ff; padding: 15px; border-left: 4px solid #c5a059;">
-                <strong>AC11.03 | Rédiger un dossier de fabrication :</strong> J'ai documenté le fonctionnement global, les schémas structurels KiCad, les vues 3D, le code source des différentes étapes de tests et les équations de correction de trajectoire.
-            </div>
+            <p style="background: #f0f7ff; padding: 15px; border-left: 4px solid #c5a059; margin-bottom: 10px;">
+                <strong>AC11.01 | Analyse fonctionnelle d’un système :</strong> Découpage de l'architecture en sous-ensembles (alimentation autonome, variateur de vitesse MLI VNH7070, réseau de capteurs I2C et détection d'obstacles).
+            </p>
+            <p style="background: #f0f7ff; padding: 15px; border-left: 4px solid #c5a059; margin-bottom: 10px;">
+                <strong>AC11.02 | Réalisation de prototypes :</strong> Processus complet de fabrication PCB (chimie, insolation, four de refusion CMS) et développement d'une architecture logicielle modulaire en C++.
+            </p>
+            <p style="background: #f0f7ff; padding: 15px; border-left: 4px solid #c5a059;">
+                <strong>AC11.03 | Rédiger un dossier de fabrication :</strong> Rédaction de la documentation technique, dossiers de fabrication KiCad, schémas de câblage et manuel d'utilisation du robot.
+            </p>
         </section>
 
-        <section class="info-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 25px; border-left: 5px solid #e67e22;">
-            <h3 style="color: #e67e22; margin-bottom: 15px;"><i class="fas fa-check-circle"></i> Apprentissages critiques : Vérifier 🎓</h3>
-            <div style="background: #fdfaf0; padding: 15px; border-left: 4px solid #e67e22; margin-bottom: 10px;">
-                <strong>AC12.01 | Procédure d’essais :</strong> J'ai mis en place des protocoles
+        <section class="info-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 25px;">
+            <h3 style="color: #003366; margin-bottom: 15px;"><i class="fas fa-check-circle"></i> Apprentissages critiques : Vérifier 🎓</h3>
+            <p style="background: #f0f7ff; padding: 15px; border-left: 4px solid #c5a059;">
+                <strong>AC12.01 | Procédure d’essais :</strong> Mise en place de protocoles de tests graduels (validation des drivers de puissance, calibration des LiDARs sur banc de mesure, essais de suivi de ligne et qualification finale sur piste).
+            </p>
+        </section>
+    </div>
+</body>
+</html>
