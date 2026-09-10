@@ -2,20 +2,29 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emir Kocaturk | Portfolio Expert GEII</title>
+    <!-- CSS Principal -->
     <link rel="stylesheet" href="style.css">
+    <!-- Police Google Modern & FontAwesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+
+    <!-- BARRE DE NAVIGATION -->
     <nav>
-        <div class="logo">EMIR KOCATURK</div>
+        <div class="logo">Emir Kocaturk</div>
         <ul>
-            <li><a href="index.html">Accueil 🏠</a></li>
-            <li><a href="projets.html">Réalisations (SAÉ) 🛠</a></li>
-			<li><a href="cv.html">Ma Candidature 📝</a></li>
+            <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+            <li><a href="projets.html"><i class="fas fa-tools"></i> Réalisations (SAÉ)</a></li>
+            <li><a href="cv.html"><i class="fas fa-file-alt"></i> Ma Candidature</a></li>
         </ul>
     </nav>
 
+    <!-- HEADER / HERO SECTION -->
     <header id="hero-pro">
         <div class="hero-container">
             <div class="header-logo side-logo">
@@ -35,42 +44,48 @@
         </div>
     </header>
 
-    <section class="container">
+    <!-- SECTION DOMAINES D'EXPERTISE -->
+    <main class="container">
         <h2 class="section-title"><i class="fas fa-layer-group"></i> Domaines d'Expertise</h2>
          
         <div class="skills-grid">
+            <!-- 1. ÉLECTRONIQUE -->
             <div class="skill-category">
                 <h3><i class="fas fa-bolt"></i> Électronique & Énergie</h3>
                 <ul>
                     <li>Mesures électriques (Oscilloscope, Multimètre)</li>
                     <li>Circuits électroniques analogiques et numériques</li>
                     <li>Notions en électrotechnique</li>
-                    <li>Conception de PCB (Kicad) et soudure</li>
+                    <li>Conception de PCB (KiCad) et soudure</li>
                 </ul>
             </div>
 
+            <!-- 2. PROGRAMMATION -->
             <div class="skill-category">
                 <h3><i class="fas fa-code"></i> Programmation</h3>
                 <ul>
-                    <li>Langages C++ et Arduino</li>
-                    <li>Algorithmique</li>
+                    <li>Langages C++ et C (Qt Creator, pigpio)</li>
+                    <li>Environnement Arduino et microcontrôleurs</li>
+                    <li>Algorithmique et structures de données</li>
                 </ul>
             </div>
 
+            <!-- 3. AUTOMATISME -->
             <div class="skill-category">
                 <h3><i class="fas fa-robot"></i> Automatisme</h3>
                 <ul>
-                    <li>Logique combinatoire et séquentielle</li>
+                    <li>Logique combinatoire et séquentielle (Grafcet)</li>
                     <li>Utilisation des automates programmables (M340, M221)</li>
                     <li>Unity Pro, Twido, EcoStruxure Machine Expert</li>
                 </ul>
             </div>
 
+            <!-- 4. CAO & SIMULATION -->
             <div class="skill-category">
                 <h3><i class="fas fa-desktop"></i> CAO & Simulation / Bureautique</h3>
                 <div class="software-tags">
                     <span class="soft-tag">KiCad</span>
-                    <span class="soft-tag">Simulide</span>
+                    <span class="soft-tag">SimulIDE</span>
                     <span class="soft-tag">LTSpice</span>
                     <span class="soft-tag">Pack Office</span>
                     <span class="soft-tag">Canva</span>
@@ -78,40 +93,41 @@
                 </div>
             </div>
 
+            <!-- 5. RÉFÉRENTIEL COMPÉTENCES GEII -->
             <div class="skill-category full-width">
-                <h3><i class="fas fa-graduation-cap"></i> Compétences Validées </h3>
-                <div class="competence-card" style="width: 100%; max-width: 900px; margin: auto; padding: 15px; background: white; border: 1px solid #ddd; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-    
-                    <img src="images/APP.png" alt="Référentiel Compétences GEII" style="width: 100%; height: auto; display: block;">
-
+                <h3><i class="fas fa-graduation-cap"></i> Compétences Validées</h3>
+                <div style="width: 100%; max-width: 900px; margin: auto; padding: 10px; background: white; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.08);">
+                    <img src="images/APP.png" alt="Référentiel Compétences GEII" style="width: 100%; height: auto; display: block; border-radius: 4px;">
                 </div>
             </div>
         </div>
-    </section>
 
-    <div style="text-align: center; margin-top: 40px; padding-bottom: 40px; font-family: sans-serif;">
-        <p style="margin-bottom: 18px; font-weight: bold; color: #003366;"> Mes Compétences en cours de validation :</p>
-        
-        <div style="display: flex; flex-direction: column; gap: 10px; align-items: center;">
-            <a href="sae-shield.html" style="color: #c5a059; text-decoration: none; font-size: 1.1rem;">
-                → Concevoir : Shield Arduino 🛡️
-            </a>
-            <a href="sae-multimetre.html" style="color: #c5a059; text-decoration: none; font-size: 1.1rem;">
-                → Concevoir : Multimètre Numérique ⚡
-            </a>
-            <a href="sae-temperature.html" style="color: #c5a059; text-decoration: none; font-size: 1.1rem;">
-                → Concevoir / Vérifier : Régulation de Température 🌡️
-            </a>
-            <a href="sae-robot.html" style="color: #c5a059; text-decoration: none; font-size: 1.1rem;">
-                → Vérifier : Robot Suiveur de Ligne et de Mur 🤖
-            </a>
-            <a href="sae-armoire.html" style="color: #c5a059; text-decoration: none; font-size: 1.1rem; font-weight: bold;">
-                → Assurer la Sécurité : Armoire Électrique Industrielle ⚡
-            </a>
-            <a href="sae-automatisme.html" style="color: #c5a059; text-decoration: none; font-size: 1.1rem; font-weight: bold;">
-                → Concevoir / Vérifier : Système de Tri Automatique ⚙️
-            </a>
-        </div>
-    </div>
+        <!-- SECTION DES COMPÉTENCES / SAÉ EN COURS -->
+        <section class="sae-links-container">
+            <p class="sae-links-title">Mes Compétences en cours de validation (SAÉ) :</p>
+            
+            <div class="sae-links-grid">
+                <a href="sae-shield.html" class="sae-link-item">
+                    <span>→ Concevoir : Shield Arduino</span> <span>🛡️</span>
+                </a>
+                <a href="sae-multimetre.html" class="sae-link-item">
+                    <span>→ Concevoir : Multimètre Numérique</span> <span>⚡</span>
+                </a>
+                <a href="sae-temperature.html" class="sae-link-item">
+                    <span>→ Concevoir / Vérifier : Régulation de Température</span> <span>🌡️</span>
+                </a>
+                <a href="sae-robot.html" class="sae-link-item">
+                    <span>→ Vérifier : Robot Suiveur de Ligne et de Mur</span> <span>🤖</span>
+                </a>
+                <a href="sae-armoire.html" class="sae-link-item">
+                    <span>→ Assurer la Sécurité : Armoire Électrique Industrielle</span> <span>⚡</span>
+                </a>
+                <a href="sae-automatisme.html" class="sae-link-item">
+                    <span>→ Concevoir / Vérifier : Système de Tri Automatique</span> <span>⚙️</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
 </body>
 </html>
