@@ -1,133 +1,114 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Mes Réalisations (SAÉ) | Emir Kocaturk</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Réalisations SAÉ | Emir Kocaturk</title>
+<meta name="description" content="Six projets techniques (SAÉ) réalisés en BUT GEII à l'IUT de Troyes : robot autonome, multimètre numérique, armoire électrique, automatisme, régulation, shield Arduino.">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <!-- NAVIGATION 🏠 -->
-    <nav>
-        <div class="logo">
-            <a href="index.html" style="color: white; text-decoration: none;">
-                <i class="fas fa-home"></i> EMIR KOCATURK
-            </a>
+
+<nav class="nav">
+  <a href="index.html" class="nav__logo"><span class="nav__logo-dot"></span> Emir Kocaturk</a>
+  <button class="nav__toggle" aria-label="Ouvrir le menu" aria-expanded="false"><span></span></button>
+  <ul class="nav__links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="projets.html" class="active">Réalisations (SAÉ)</a></li>
+    <li><a href="cv.html">Candidature</a></li>
+  </ul>
+</nav>
+
+<header class="hero" style="padding-bottom:10px;">
+  <div class="hero__blob hero__blob--a" aria-hidden="true"></div>
+  <div class="hero__blob hero__blob--b" aria-hidden="true"></div>
+  <div class="wrap" style="position:relative; z-index:1; text-align:center; max-width:720px; margin:0 auto;">
+    <span class="hero__badge" style="animation:rise .6s ease forwards;"><i class="fas fa-tasks"></i> Travaux pratiques &amp; SAÉ — BUT GEII</span>
+    <h1 style="margin-top:18px; animation:rise .6s .1s ease forwards; opacity:0;">Six projets, <span class="accent">du schéma au prototype fonctionnel</span></h1>
+    <p class="hero__role" style="margin:0 auto 10px; animation:rise .6s .2s ease forwards; opacity:0;">Conception électronique, programmation embarquée et automatisme industriel — chaque SAÉ ci-dessous détaille la méthode, les choix techniques et le résultat.</p>
+  </div>
+</header>
+
+<section class="section section--tight">
+  <div class="wrap">
+    <div class="projects-grid">
+
+      <a href="sae-armoire.html" class="project-card reveal">
+        <div class="project-card__top pc-3"><i class="fas fa-plug-circle-bolt"></i><h3>Armoire électrique industrielle</h3></div>
+        <div class="project-card__body">
+          <p>Câblage complet d'une chaîne de puissance triphasée et application de la procédure de consignation NF C 18-510 sous habilitation électrique.</p>
+          <div class="tag-row"><span class="tag">Triphasé</span><span class="tag">Sécurité</span></div>
+          <span class="project-card__link">Consulter le projet <i class="fas fa-arrow-right"></i></span>
         </div>
-        <ul>
-            <li><a href="index.html">Accueil 🏠</a></li>
-            <li><a href="projets.html" class="active">Réalisations (SAÉ) 🛠</a></li>
-            <li><a href="cv.html">Ma Candidature 📝</a></li>
-        </ul>
-    </nav>
+      </a>
 
-    <div class="container" style="margin-top: 30px;">
-        <header style="text-align: center; margin-bottom: 40px;">
-            <h1 style="color: #003366; font-size: 2.5rem;">Travaux Pratiques & SAÉ (BUT GEII)</h1>
-            <p style="color: #666;">Découvrez l'ensemble de mes projets techniques validés à l'IUT de Troyes</p>
-            <div style="height: 4px; width: 100px; background: #c5a059; margin: 15px auto;"></div>
-        </header>
-
-        <!-- GRILLE DE PROJETS HARMONISÉE (3 Colonnes sur PC, 1 sur mobile) -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px;">
-
-            <!-- PROJET 1 : ARMOIRE ÉLECTRIQUE -->
-            <div style="background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); overflow: hidden; display: flex; flex-direction: column; border: 1px solid #eee;">
-                <div style="background: #003366; color: white; padding: 20px; text-align: center;">
-                    <i class="fas fa-bolt" style="font-size: 2.2rem; margin-bottom: 10px;"></i>
-                    <h3 style="margin: 0; font-size: 1.25rem;">Armoire Électrique Industrielle</h3>
-                    <p style="margin: 5px 0 0 0; font-size: 0.85rem; color: #c5a059; font-weight: bold;">SAÉ • Énergie & Automatisme</p>
-                </div>
-                <div style="padding: 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
-                    <p style="font-size: 0.9rem; color: #444; margin: 0 0 15px 0; line-height: 1.4;">Câblage complet d'une armoire de puissance triphasée, raccordement logique automate et protocole de consignation de sécurité (EPI, VAT).</p>
-                    <div>
-                        <div style="margin-bottom: 10px;"><span style="background: #f0f4f8; color: #003366; padding: 3px 8px; border-radius: 15px; font-size: 0.75rem; font-weight: bold; margin-right: 5px;">Triphasé</span><span style="background: #f0f4f8; color: #003366; padding: 3px 8px; border-radius: 15px; font-size: 0.75rem; font-weight: bold;">Sécurité</span></div>
-                        <a href="sae-armoire.html" style="display: block; background: #003366; color: white; text-align: center; padding: 10px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.9rem;">Consulter le projet <i class="fas fa-arrow-right" style="font-size: 0.8rem; margin-left: 5px;"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- PROJET 2 : ROBOT SUIVEUR DE LIGNE -->
-            <div style="background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); overflow: hidden; display: flex; flex-direction: column; border: 1px solid #eee;">
-                <div style="background: #003366; color: white; padding: 20px; text-align: center;">
-                    <i class="fas fa-robot" style="font-size: 2.2rem; margin-bottom: 10px;"></i>
-                    <h3 style="margin: 0; font-size: 1.25rem;">Robot Suiveur de Ligne</h3>
-                    <p style="margin: 5px 0 0 0; font-size: 0.85rem; color: #c5a059; font-weight: bold;">SAÉ • Robotique & Programmation</p>
-                </div>
-                <div style="padding: 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
-                    <p style="font-size: 0.9rem; color: #444; margin: 0 0 15px 0; line-height: 1.4;">Conception d'un robot mobile autonome sous Arduino C++ combinant suivi de ligne optique, télémétrie LiDAR pour mur et évitement d'obstacles.</p>
-                    <div>
-                        <div style="margin-bottom: 10px;"><span style="background: #f0f4f8; color: #003366; padding: 3px 8px; border-radius: 15px; font-size: 0.75rem; font-weight: bold; margin-right: 5px;">C++ Arduino</span><span style="background: #f0f4f8; color: #003366; padding: 3px 8px; border-radius: 15px; font-size: 0.75rem; font-weight: bold;">LiDAR I2C</span></div>
-                        <a href="sae-robot.html" style="display: block; background: #003366; color: white; text-align: center; padding: 10px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.9rem;">Consulter le projet <i class="fas fa-arrow-right" style="font-size: 0.8rem; margin-left: 5px;"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- PROJET 3 : SHIELD ARDUINO -->
-            <div style="background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); overflow: hidden; display: flex; flex-direction: column; border: 1px solid #eee;">
-                <div style="background: #003366; color: white; padding: 20px; text-align: center;">
-                    <i class="fas fa-microchip" style="font-size: 2.2rem; margin-bottom: 10px;"></i>
-                    <h3 style="margin: 0; font-size: 1.25rem;">Conception Shield Arduino</h3>
-                    <p style="margin: 5px 0 0 0; font-size: 0.85rem; color: #c5a059; font-weight: bold;">SAÉ • Électronique & CAO</p>
-                </div>
-                <div style="padding: 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
-                    <p style="font-size: 0.9rem; color: #444; margin: 0 0 15px 0; line-height: 1.4;">Conception et soudure d'une carte d'extension matérielle personnalisée pour microcontrôleur Arduino Nano, avec validation des périphériques E/S.</p>
-                    <div>
-                        <div style="margin-bottom: 10px;"><span style="background: #f0f4f8; color: #003366; padding: 3px 8px; border-radius: 15px; font-size: 0.75rem; font-weight: bold; margin-right: 5px;">Prototypage</span><span style="background: #f0f4f8; color: #003366; padding: 3px 8px; border-radius: 15px; font-size: 0.75rem; font-weight: bold;">Soudure</span></div>
-                        <a href="sae-shield.html" style="display: block; background: #003366; color: white; text-align: center; padding: 10px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.9rem;">Consulter le projet <i class="fas fa-arrow-right" style="font-size: 0.8rem; margin-left: 5px;"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- PROJET 4 : MULTIMÈTRE NUMÉRIQUE -->
-            <div style="background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); overflow: hidden; display: flex; flex-direction: column; border: 1px solid #eee;">
-                <div style="background: #003366; color: white; padding: 20px; text-align: center;">
-                    <i class="fas fa-wave-square" style="font-size: 2.2rem; margin-bottom: 10px;"></i>
-                    <h3 style="margin: 0; font-size: 1.25rem;">Multimètre Numérique</h3>
-                    <p style="margin: 5px 0 0 0; font-size: 0.85rem; color: #c5a059; font-weight: bold;">SAÉ • Instrumentation & Mesure</p>
-                </div>
-                <div style="padding: 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
-                    <p style="font-size: 0.9rem; color: #444; margin: 0 0 15px 0; line-height: 1.4;">Étude de la chaîne d'acquisition analogique (ponts diviseurs, calibrage auto) et traitement numérique pour concevoir un appareil de mesure autonomie.</p>
-                    <div>
-                        <div style="margin-bottom: 10px;"><span style="background: #f0f4f8; color: #003366; padding: 3px 8px; border-radius: 15px; font-size: 0.75rem; font-weight: bold; margin-right: 5px;">Analogique</span><span style="background: #f0f4f8; color: #003366; padding: 3px 8px; border-radius: 15px; font-size: 0.75rem; font-weight: bold;">Acquisition</span></div>
-                        <a href="sae-multimetre.html" style="display: block; background: #003366; color: white; text-align: center; padding: 10px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.9rem;">Consulter le projet <i class="fas fa-arrow-right" style="font-size: 0.8rem; margin-left: 5px;"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- PROJET 5 : RÉGULATION DE TEMPÉRATURE -->
-            <div style="background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); overflow: hidden; display: flex; flex-direction: column; border: 1px solid #eee;">
-                <div style="background: #003366; color: white; padding: 20px; text-align: center;">
-                    <i class="fas fa-thermometer-half" style="font-size: 2.2rem; margin-bottom: 10px;"></i>
-                    <h3 style="margin: 0; font-size: 1.25rem;">Régulation de Température</h3>
-                    <p style="margin: 5px 0 0 0; font-size: 0.85rem; color: #c5a059; font-weight: bold;">SAÉ • Automatique / Asservissement</p>
-                </div>
-                <div style="padding: 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
-                    <p style="font-size: 0.9rem; color: #444; margin: 0 0 15px 0; line-height: 1.4;">Conception d'une chaîne de régulation thermique modulaire, analyse fonctionnelle inter-cartes et banc d'essai pour l'asservissement en température.</p>
-                    <div>
-                        <div style="margin-bottom: 10px;"><span style="background: #f0f4f8; color: #003366; padding: 3px 8px; border-radius: 15px; font-size: 0.75rem; font-weight: bold; margin-right: 5px;">Asservissement</span><span style="background: #f0f4f8; color: #003366; padding: 3px 8px; border-radius: 15px; font-size: 0.75rem; font-weight: bold;">Modulaire</span></div>
-                        <a href="sae-temperature.html" style="display: block; background: #003366; color: white; text-align: center; padding: 10px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.9rem;">Consulter le projet <i class="fas fa-arrow-right" style="font-size: 0.8rem; margin-left: 5px;"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- PROJET 6 : TRI AUTOMATIQUE -->
-            <div style="background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); overflow: hidden; display: flex; flex-direction: column; border: 1px solid #eee;">
-                <div style="background: #003366; color: white; padding: 20px; text-align: center;">
-                    <i class="fas fa-cogs" style="font-size: 2.2rem; margin-bottom: 10px;"></i>
-                    <h3 style="margin: 0; font-size: 1.25rem;">Système de Tri Automatique</h3>
-                    <p style="margin: 5px 0 0 0; font-size: 0.85rem; color: #c5a059; font-weight: bold;">SAÉ • Automatisme Industriel</p>
-                </div>
-                <div style="padding: 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
-                    <p style="font-size: 0.9rem; color: #444; margin: 0 0 15px 0; line-height: 1.4;">Programmation d'un automate Schneider sous Grafcet pour le tri sélectif de pièces par couleur via capteur chromatique et suivi par comptage d'impulsions.</p>
-                    <div>
-                        <div style="margin-bottom: 10px;"><span style="background: #f0f4f8; color: #003366; padding: 3px 8px; border-radius: 15px; font-size: 0.75rem; font-weight: bold; margin-right: 5px;">Grafcet SFC</span><span style="background: #f0f4f8; color: #003366; padding: 3px 8px; border-radius: 15px; font-size: 0.75rem; font-weight: bold;">Pneumatique</span></div>
-                        <a href="sae-automatisme.html" style="display: block; background: #003366; color: white; text-align: center; padding: 10px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.9rem;">Consulter le projet <i class="fas fa-arrow-right" style="font-size: 0.8rem; margin-left: 5px;"></i></a>
-                    </div>
-                </div>
-            </div>
-
+      <a href="sae-robot.html" class="project-card reveal">
+        <div class="project-card__top pc-1"><i class="fas fa-robot"></i><h3>Robot suiveur de ligne et de mur</h3></div>
+        <div class="project-card__body">
+          <p>Robot mobile autonome : PCB de puissance sous KiCad, télémétrie LiDAR et machine à états en C++ pour la navigation.</p>
+          <div class="tag-row"><span class="tag">C++ Arduino</span><span class="tag">LiDAR I2C</span></div>
+          <span class="project-card__link">Consulter le projet <i class="fas fa-arrow-right"></i></span>
         </div>
+      </a>
+
+      <a href="sae-shield.html" class="project-card reveal">
+        <div class="project-card__top pc-5"><i class="fas fa-microchip"></i><h3>Shield Arduino Nano</h3></div>
+        <div class="project-card__body">
+          <p>Carte d'extension pour Arduino Nano : assemblage, soudure de précision et programmation des périphériques.</p>
+          <div class="tag-row"><span class="tag">Prototypage</span><span class="tag">Soudure</span></div>
+          <span class="project-card__link">Consulter le projet <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+
+      <a href="sae-multimetre.html" class="project-card reveal">
+        <div class="project-card__top pc-4"><i class="fas fa-wave-square"></i><h3>Multimètre numérique</h3></div>
+        <div class="project-card__body">
+          <p>Instrument de mesure autonome (V/A/Ω) conçu, routé sous KiCad et programmé en seulement trois jours.</p>
+          <div class="tag-row"><span class="tag">Analogique</span><span class="tag">Acquisition</span></div>
+          <span class="project-card__link">Consulter le projet <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+
+      <a href="sae-temperature.html" class="project-card reveal">
+        <div class="project-card__top pc-2"><i class="fas fa-temperature-half"></i><h3>Régulation de température</h3></div>
+        <div class="project-card__body">
+          <p>Chaîne de régulation thermique modulaire répartie sur plusieurs cartes, avec diagnostic de dysfonctionnements.</p>
+          <div class="tag-row"><span class="tag">Asservissement</span><span class="tag">Modulaire</span></div>
+          <span class="project-card__link">Consulter le projet <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+
+      <a href="sae-automatisme.html" class="project-card reveal">
+        <div class="project-card__top pc-6"><i class="fas fa-gears"></i><h3>Système de tri automatique</h3></div>
+        <div class="project-card__body">
+          <p>Tri de pièces par couleur sur automate Schneider : capteur analogique, comptage d'impulsions et Grafcet.</p>
+          <div class="tag-row"><span class="tag">Grafcet</span><span class="tag">Pneumatique</span></div>
+          <span class="project-card__link">Consulter le projet <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+
     </div>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="wrap">
+    <div class="next-project reveal">
+      <div>
+        <span>Ces projets vous parlent ?</span>
+        <strong>Retrouvez mon CV complet et mes coordonnées</strong>
+      </div>
+      <a href="cv.html" class="btn btn--ghost"><i class="fas fa-file-arrow-down"></i> Ma candidature</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Emir Kocaturk — IUT de Troyes, BUT GEII · <a href="mailto:kocaturkemir0@gmail.com">kocaturkemir0@gmail.com</a>
+</footer>
+
+<button class="to-top" aria-label="Retour en haut"><i class="fas fa-arrow-up"></i></button>
+<script src="main.js"></script>
 </body>
 </html>
