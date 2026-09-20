@@ -1,161 +1,215 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Emir Kocaturk | Portfolio Expert GEII</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Emir Kocaturk — Étudiant GEII, Électronique & Systèmes Embarqués</title>
+<meta name="description" content="Portfolio d'Emir Kocaturk, étudiant BUT2 GEII (IUT de Troyes) — projets d'électronique, automatisme et systèmes embarqués. Recherche de stage janv.–mars 2027.">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <nav>
-        <div class="logo">
-            <a href="index.html" style="color: white; text-decoration: none;">
-                <i class="fas fa-home"></i> EMIR KOCATURK
-            </a>
+
+<nav class="nav">
+  <a href="index.html" class="nav__logo"><span class="nav__logo-dot"></span> Emir Kocaturk</a>
+  <button class="nav__toggle" aria-label="Ouvrir le menu" aria-expanded="false"><span></span></button>
+  <ul class="nav__links">
+    <li><a href="index.html" class="active">Accueil</a></li>
+    <li><a href="projets.html">Réalisations (SAÉ)</a></li>
+    <li><a href="cv.html">Candidature</a></li>
+  </ul>
+</nav>
+
+<header class="hero">
+  <div class="hero__blob hero__blob--a" aria-hidden="true"></div>
+  <div class="hero__blob hero__blob--b" aria-hidden="true"></div>
+  <div class="hero__blob hero__blob--c" aria-hidden="true"></div>
+
+  <div class="wrap hero__grid">
+    <div>
+      <span class="hero__badge"><i class="fas fa-circle" style="font-size:.5rem"></i> Recherche de stage — 11 janvier au 5 mars 2027</span>
+      <h1>Emir Kocaturk, futur ingénieur <span class="accent">Électronique &amp; Systèmes Embarqués</span></h1>
+      <p class="hero__role">Étudiant en 2ᵉ année de BUT Génie Électrique et Informatique Industrielle à l'IUT de Troyes. Je conçois des cartes électroniques, je les programme, et je les fais fonctionner — du schéma jusqu'au prototype qui marche.</p>
+      <div class="hero__tags">
+        <span><i class="fas fa-microchip"></i> Électronique</span>
+        <span><i class="fas fa-robot"></i> Automatisme</span>
+        <span><i class="fas fa-code"></i> Programmation</span>
+        <span><i class="fas fa-bolt"></i> Énergie</span>
+      </div>
+      <div class="hero__cta">
+        <a href="projets.html" class="btn btn--primary"><i class="fas fa-diagram-project"></i> Voir mes projets</a>
+        <a href="cv.html" class="btn btn--ghost"><i class="fas fa-file-arrow-down"></i> Mon CV &amp; contact</a>
+      </div>
+    </div>
+
+    <div class="chip" aria-hidden="true">
+      <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="chipGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#2E5CFF"/>
+            <stop offset="55%" stop-color="#7B2FF7"/>
+            <stop offset="100%" stop-color="#FF4D6D"/>
+          </linearGradient>
+        </defs>
+        <path class="chip__path" d="M150 20 V70 M150 230 V280 M20 150 H70 M230 150 H280
+          M60 60 L95 95 M240 60 L205 95 M60 240 L95 205 M240 240 L205 205
+          M95 30 V70 M205 30 V70 M95 270 V230 M205 270 V230
+          M30 95 H70 M270 95 H230 M30 205 H70 M270 205 H230" />
+        <rect class="chip__core" x="95" y="95" width="110" height="110" rx="16"/>
+        <circle class="chip__node" cx="150" cy="20" r="6"/>
+        <circle class="chip__node" cx="150" cy="280" r="6"/>
+        <circle class="chip__node" cx="20" cy="150" r="6"/>
+        <circle class="chip__node" cx="280" cy="150" r="6"/>
+        <circle class="chip__node" cx="60" cy="60" r="5"/>
+        <circle class="chip__node" cx="240" cy="60" r="5"/>
+        <circle class="chip__node" cx="60" cy="240" r="5"/>
+        <circle class="chip__node" cx="240" cy="240" r="5"/>
+        <text class="chip__label" x="150" y="155" text-anchor="middle">GEII</text>
+      </svg>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><div class="stat__num"><span data-count="6">0</span></div><div class="stat__label">Projets SAÉ réalisés</div></div>
+      <div class="stat"><div class="stat__num"><span data-count="4">0</span></div><div class="stat__label">Domaines techniques</div></div>
+      <div class="stat"><div class="stat__num"><span data-count="3">0</span></div><div class="stat__label">Langues parlées</div></div>
+      <div class="stat"><div class="stat__num">B1V</div><div class="stat__label">Habilitation électrique</div></div>
+    </div>
+  </div>
+</header>
+
+<section class="section" id="expertise">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><i class="fas fa-layer-group"></i> Domaines d'expertise</span>
+      <h2>Ce que je sais faire, concrètement</h2>
+      <p>Quatre domaines complémentaires, développés en cours et validés sur des projets réels — détaillés dans mes réalisations SAÉ.</p>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-card skill-card--blue reveal">
+        <div class="skill-card__head">
+          <div class="skill-card__icon"><i class="fas fa-bolt"></i></div>
+          <h3>Électronique &amp; Énergie</h3>
         </div>
         <ul>
-            <li><a href="index.html">Accueil 🏠</a></li>
-            <li><a href="projets.html">Réalisations (SAÉ) 🛠</a></li>
-            <li><a href="cv.html">Ma Candidature 📝</a></li>
+          <li>Mesures électriques (oscilloscope, multimètre)</li>
+          <li>Circuits analogiques et numériques</li>
+          <li>Conception PCB (KiCad) et soudure</li>
+          <li>Habilitation électrique B1V</li>
         </ul>
-    </nav>
+      </div>
 
-    <header id="hero-pro">
-        <div class="hero-container">
-            <div class="header-logo side-logo">
-                <img src="images/logo_iut_troyes.png" alt="Logo IUT Troyes">
-            </div>
-
-            <div class="header-content">
-                <div class="badge-iut">IUT de Troyes - URCA</div>
-                <h1>Emir Kocaturk</h1>
-                <p>Étudiant en BUT Génie Électrique et Informatique Industrielle</p>
-                <div class="tags-skills">Électronique • Automatisme • Programmation • Énergie</div>
-            </div>
-
-            <div class="header-logo side-logo">
-                <img src="images/logo_geii.png" alt="Logo GEII">
-            </div>
+      <div class="skill-card skill-card--violet reveal">
+        <div class="skill-card__head">
+          <div class="skill-card__icon"><i class="fas fa-code"></i></div>
+          <h3>Programmation</h3>
         </div>
-    </header>
+        <ul>
+          <li>C / C++ et Arduino</li>
+          <li>Algorithmique et machines à états</li>
+          <li>Traitement de capteurs (I2C, analogique)</li>
+        </ul>
+      </div>
 
-    <section class="container">
-        <h2 class="section-title"><i class="fas fa-layer-group"></i> Domaines d'Expertise</h2>
-         
-        <div class="skills-grid">
-            <div class="skill-category">
-                <h3><i class="fas fa-bolt"></i> Électronique & Énergie</h3>
-                <ul>
-                    <li>Mesures électriques (Oscilloscope, Multimètre)</li>
-                    <li>Circuits électroniques analogiques et numériques</li>
-                    <li>Notions en électrotechnique</li>
-                    <li>Conception de PCB (Kicad) et soudure</li>
-                </ul>
-            </div>
-
-            <div class="skill-category">
-                <h3><i class="fas fa-code"></i> Programmation</h3>
-                <ul>
-                    <li>Langages C++ et Arduino</li>
-                    <li>Algorithmique</li>
-                </ul>
-            </div>
-
-            <div class="skill-category">
-                <h3><i class="fas fa-robot"></i> Automatisme</h3>
-                <ul>
-                    <li>Logique combinatoire et séquentielle</li>
-                    <li>Utilisation des automates programmables (M340, M221)</li>
-                    <li>Unity Pro, Twido, EcoStruxure Machine Expert</li>
-                </ul>
-            </div>
-
-            <div class="skill-category">
-                <h3><i class="fas fa-desktop"></i> CAO & Simulation</h3>
-                <div class="software-tags">
-                    <span class="soft-tag">KiCad</span>
-                    <span class="soft-tag">SimulIDE</span>
-                    <span class="soft-tag">LTSpice</span>
-                    <span class="soft-tag">Canva</span>
-                </div>
-            </div>
-
-            <div class="skill-category full-width">
-                <h3><i class="fas fa-graduation-cap"></i> Compétences Validées</h3>
-                <div class="competence-card" style="width: 100%; max-width: 900px; margin: auto; padding: 15px; background: white; border: 1px solid #ddd; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-                    <img src="images/APP.png" alt="Référentiel Compétences GEII" style="width: 100%; height: auto; display: block;">
-                </div>
-            </div>
+      <div class="skill-card skill-card--coral reveal">
+        <div class="skill-card__head">
+          <div class="skill-card__icon"><i class="fas fa-robot"></i></div>
+          <h3>Automatisme</h3>
         </div>
-    </section>
+        <ul>
+          <li>Logique combinatoire et séquentielle (Grafcet)</li>
+          <li>Automates Schneider M340 et M221</li>
+          <li>Unity Pro, Twido Suite, EcoStruxure</li>
+        </ul>
+      </div>
 
-    <!-- TABLEAU ACCÈS DIRECT AUX SAÉ (TOUT EN BAS) -->
-    <section class="container" style="margin-top: 40px; margin-bottom: 50px;">
-        <h2 class="section-title"><i class="fas fa-tasks"></i> Mes Compétences en cours de validation (SAÉ)</h2>
-        
-        <div style="overflow-x: auto; background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); border: 1px solid #e2e8f0; margin-top: 20px;">
-            <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.95rem;">
-                <thead>
-                    <tr style="background: #003366; color: white;">
-                        <th style="padding: 15px 20px;">Projet (SAÉ)</th>
-                        <th style="padding: 15px 20px;">Domaine Technique</th>
-                        <th style="padding: 15px 20px;">Compétence Clé</th>
-                        <th style="padding: 15px 20px; text-align: center;">Accès</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr style="border-bottom: 1px solid #eee;">
-                        <td style="padding: 15px 20px; font-weight: bold; color: #003366;">🛡️ Shield Arduino Nano</td>
-                        <td style="padding: 15px 20px;">Électronique & Embarqué</td>
-                        <td style="padding: 15px 20px;">Concevoir : Shield Arduino</td>
-                        <td style="padding: 15px 20px; text-align: center;">
-                            <a href="sae-shield.html" style="background: #003366; color: #c5a059; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.85rem;">Voir le projet <i class="fas fa-arrow-right"></i></a>
-                        </td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid #eee; background: #fcfcfc;">
-                        <td style="padding: 15px 20px; font-weight: bold; color: #003366;">⚡ Multimètre Numérique</td>
-                        <td style="padding: 15px 20px;">Instrumentation & Mesure</td>
-                        <td style="padding: 15px 20px;">Concevoir : Multimètre Numérique</td>
-                        <td style="padding: 15px 20px; text-align: center;">
-                            <a href="sae-multimetre.html" style="background: #003366; color: #c5a059; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.85rem;">Voir le projet <i class="fas fa-arrow-right"></i></a>
-                        </td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid #eee;">
-                        <td style="padding: 15px 20px; font-weight: bold; color: #003366;">🌡️ Régulation de Température</td>
-                        <td style="padding: 15px 20px;">Automatique & Asservissement</td>
-                        <td style="padding: 15px 20px;">Concevoir / Vérifier : Régulation</td>
-                        <td style="padding: 15px 20px; text-align: center;">
-                            <a href="sae-temperature.html" style="background: #003366; color: #c5a059; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.85rem;">Voir le projet <i class="fas fa-arrow-right"></i></a>
-                        </td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid #eee; background: #fcfcfc;">
-                        <td style="padding: 15px 20px; font-weight: bold; color: #003366;">🤖 Robot Suiveur de Ligne et Mur</td>
-                        <td style="padding: 15px 20px;">Robotique & Programmation C++</td>
-                        <td style="padding: 15px 20px;">Vérifier : Robot Suiveur de Ligne</td>
-                        <td style="padding: 15px 20px; text-align: center;">
-                            <a href="sae-robot.html" style="background: #003366; color: #c5a059; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.85rem;">Voir le projet <i class="fas fa-arrow-right"></i></a>
-                        </td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid #eee;">
-                        <td style="padding: 15px 20px; font-weight: bold; color: #003366;">⚡ Armoire Électrique Industrielle</td>
-                        <td style="padding: 15px 20px;">Distribution d'Énergie & Sécurité</td>
-                        <td style="padding: 15px 20px;">Assurer la Sécurité : Armoire</td>
-                        <td style="padding: 15px 20px; text-align: center;">
-                            <a href="sae-armoire.html" style="background: #003366; color: #c5a059; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.85rem;">Voir le projet <i class="fas fa-arrow-right"></i></a>
-                        </td>
-                    </tr>
-                    <tr style="background: #fcfcfc;">
-                        <td style="padding: 15px 20px; font-weight: bold; color: #003366;">⚙️ Système de Tri Automatique</td>
-                        <td style="padding: 15px 20px;">Automatisme Industriel & Grafcet</td>
-                        <td style="padding: 15px 20px;">Concevoir / Vérifier : Tri Automatique</td>
-                        <td style="padding: 15px 20px; text-align: center;">
-                            <a href="sae-automatisme.html" style="background: #003366; color: #c5a059; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.85rem;">Voir le projet <i class="fas fa-arrow-right"></i></a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+      <div class="skill-card skill-card--cyan reveal">
+        <div class="skill-card__head">
+          <div class="skill-card__icon"><i class="fas fa-desktop"></i></div>
+          <h3>CAO &amp; Simulation</h3>
         </div>
-    </section>
+        <div class="tag-row">
+          <span class="tag">KiCad</span>
+          <span class="tag">LTSpice</span>
+          <span class="tag">SimulIDE</span>
+          <span class="tag">Quartus (VHDL)</span>
+          <span class="tag">Canva</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<section class="section section--tight" id="referentiel">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><i class="fas fa-graduation-cap"></i> Suivi de formation</span>
+      <h2>Compétences validées au référentiel GEII</h2>
+    </div>
+    <div class="card reveal" style="padding:16px;">
+      <img src="images/APP.png" alt="Référentiel de compétences GEII d'Emir Kocaturk" style="border-radius:12px; width:100%;">
+    </div>
+  </div>
+</section>
+
+<section class="section" id="apercu-projets">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><i class="fas fa-tasks"></i> Réalisations</span>
+      <h2>Mes derniers projets techniques</h2>
+      <p>Six SAÉ menées à l'IUT de Troyes, du schéma électronique jusqu'au prototype qualifié en conditions réelles.</p>
+    </div>
+
+    <div class="projects-grid">
+      <a href="sae-robot.html" class="project-card reveal">
+        <div class="project-card__top pc-1"><i class="fas fa-robot"></i><h3>Robot suiveur de ligne et de mur</h3></div>
+        <div class="project-card__body">
+          <p>PCB de puissance sous KiCad, télémétrie LiDAR et navigation autonome en C++.</p>
+          <span class="project-card__link">Voir le projet <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+      <a href="sae-multimetre.html" class="project-card reveal">
+        <div class="project-card__top pc-4"><i class="fas fa-wave-square"></i><h3>Multimètre numérique</h3></div>
+        <div class="project-card__body">
+          <p>Instrument de mesure conçu, routé et programmé en 3 jours.</p>
+          <span class="project-card__link">Voir le projet <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+      <a href="sae-armoire.html" class="project-card reveal">
+        <div class="project-card__top pc-3"><i class="fas fa-plug-circle-bolt"></i><h3>Armoire électrique industrielle</h3></div>
+        <div class="project-card__body">
+          <p>Câblage triphasé et procédure de consignation NF C 18-510 sous habilitation.</p>
+          <span class="project-card__link">Voir le projet <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+    </div>
+
+    <div style="text-align:center; margin-top:34px;">
+      <a href="projets.html" class="btn btn--ghost reveal"><i class="fas fa-grip"></i> Voir les 6 projets</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="wrap">
+    <div class="next-project reveal">
+      <div>
+        <span>Disponible du 11 janvier au 5 mars 2027</span>
+        <strong>Envie d'échanger sur un stage en électronique / embarqué ?</strong>
+      </div>
+      <a href="cv.html" class="btn btn--ghost"><i class="fas fa-paper-plane"></i> Accéder à ma candidature</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Emir Kocaturk — IUT de Troyes, BUT GEII · <a href="mailto:kocaturkemir0@gmail.com">kocaturkemir0@gmail.com</a>
+</footer>
+
+<button class="to-top" aria-label="Retour en haut"><i class="fas fa-arrow-up"></i></button>
+
+<script src="main.js"></script>
 </body>
 </html>
