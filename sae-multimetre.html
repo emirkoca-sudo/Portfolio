@@ -1,111 +1,124 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Multimètre Numérique | Emir Kocaturk</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Multimètre Numérique | Emir Kocaturk</title>
+<meta name="description" content="Conception et réalisation d'un multimètre numérique autonome : dimensionnement, routage PCB sous KiCad et programmation Arduino, en trois jours.">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <nav>
-        <div class="logo">
-            <a href="index.html" style="color: white; text-decoration: none;">
-                <i class="fas fa-home"></i> EMIR KOCATURK
-            </a>
-        </div>
-        <ul>
-            <li><a href="index.html">Accueil 🏠</a></li>
-            <li><a href="projets.html">Réalisations (SAÉ) 🛠</a></li>
-            <li><a href="cv.html">Ma Candidature 📝</a></li>
-        </ul>
-    </nav>
 
-    <div class="container sae-detail">
-        <header class="sae-header-pro" style="text-align: center; margin-bottom: 40px;">
-            <a href="projets.html" class="back-link"><i class="fas fa-arrow-left"></i> Retour aux projets</a>
-            <h1 style="color: #003366; font-size: 2.5rem; margin-top: 10px;">Multimètre Numérique ⚡</h1>
-            <div style="height: 4px; width: 80px; background: #c5a059; margin: 15px auto;"></div>
-        </header>
+<nav class="nav">
+  <a href="index.html" class="nav__logo"><span class="nav__logo-dot"></span> Emir Kocaturk</a>
+  <button class="nav__toggle" aria-label="Ouvrir le menu" aria-expanded="false"><span></span></button>
+  <ul class="nav__links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="projets.html" class="active">Réalisations (SAÉ)</a></li>
+    <li><a href="cv.html">Candidature</a></li>
+  </ul>
+</nav>
 
-        <section class="info-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 25px; border-top: 5px solid #003366;">
-            <h2><i class="fas fa-bullseye"></i> Objectif du projet 🎯</h2>
-            <p>Concevoir et réaliser un instrument de mesure numérique autonome capable de relever des tensions, des courants et des résistances. Ce projet visait à synthétiser les connaissances en électronique analogique et en programmation embarquée pour créer un outil de diagnostic précis et fonctionnel.</p>
-            <p>La réalisation de ce multimètre numérique m'a permis de valider deux compétences clés du référentiel GEII :</p>
-            <p style="background: #f0f7ff; padding: 15px; border-left: 4px solid #c5a059; margin-top: 15px; margin-bottom: 10px;">
-                <strong>AC11.02 | Conception et réalisation matérielle :</strong> Sélection rigoureuse des composants électroniques, routage du circuit imprimé (PCB) et assemblage final par soudure manuelle du prototype.
-            </p>
-            <p style="background: #f0f7ff; padding: 15px; border-left: 4px solid #c5a059;">
-                <strong>AC12.01 | Tests et mise en service :</strong> Établissement de protocoles de tests systématiques pour vérifier la précision des mesures et valider la conformité du programme embarqué.
-            </p>
-        </section>
+<header class="detail-header wrap">
+  <a href="projets.html" class="back-link"><i class="fas fa-arrow-left"></i> Retour aux projets</a>
+  <h1>Multimètre numérique autonome</h1>
+  <div class="detail-header__tags">
+    <span class="tag">Instrumentation &amp; mesure</span>
+    <span class="tag">Délai : 3 jours</span>
+    <span class="tag">Projet individuel</span>
+  </div>
+</header>
 
-        <section class="info-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 25px;">
-            <h2><i class="fas fa-list-check"></i> Résumé de la SAÉ 📝</h2>
-            
-            <p><strong>Cadre et Enjeux ⏱️ :</strong> Concevoir, dans un délai restreint de trois jours, un instrument de mesure portable et fonctionnel capable de relever des tensions, des courants et des résistances avec une précision optimale.</p>
+<main class="wrap" style="max-width:820px;">
 
-            <p><strong>Étude Théorique et Dimensionnement 🧠 :</strong> Analyse des fonctionnalités requises et modélisation des étages de conditionnement. Dimensionnement précis des ponts diviseurs de tension et des résistances de protection pour garantir la fiabilité des mesures et la sécurité du système.</p>
-
-            <p><strong>Conception et Routage CAO 💻 :</strong> Saisie du schéma électronique et routage optimisé de la carte imprimée (PCB) sous logiciel spécialisé, en veillant à la qualité des pistes et à la réduction des bruits de mesure.</p>
-
-            <p><strong>Intégration Matérielle et Assemblage 🛠️ :</strong> Insertion et soudure manuelle de l'ensemble des composants. Validation par tests de continuité électrique et contrôles de mise sous tension avant programmation.</p>
-
-            <p><strong>Développement Embarqué (Arduino C/C++) 🤖 :</strong> Programmation avancée du microcontrôleur pour répondre aux exigences du cahier des charges :</p>
-            <ul>
-                <li>⚡ Implémentation d'un système de <strong>calibres automatiques</strong> pour maximiser la résolution de mesure.</li>
-                <li>💡 Gestion d'une <strong>interface utilisateur dynamique</strong> avec voyants LED témoins selon la grandeur mesurée (Voltmètre, Ampèremètre, Ohmmètre).</li>
-                <li>🔢 Traitement des données et affichage en temps réel sur un <strong>écran 7 segments à 4 digits</strong> multiplexé.</li>
-            </ul>
-        </section>
-
-        <section class="info-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 25px;">
-            <h2><i class="fas fa-camera"></i> Galerie Photos 📸</h2>
-            <div class="slider-container" style="max-width: 700px; margin: auto; position: relative; overflow: hidden; border-radius: 10px; border: 2px solid #ddd;">
-                <div class="slide fade">
-                    <img src="images/multi1.png" style="width:100%" alt="Multimètre Face">
-                    <div style="text-align:center; padding: 10px; background: #003366; color: white;">Vue globale du multimètre terminé 🖼️</div>
-                </div>
-                <div class="slide fade">
-                    <img src="images/multi2.png" style="width:100%" alt="PCB Multimètre">
-                    <div style="text-align:center; padding: 10px; background: #003366; color: white;">Aperçu du circuit imprimé (PCB) routé 🔌</div>
-                </div>
-                <div class="slide fade">
-                    <img src="images/multi3.png" style="width:100%" alt="Tests Multimètre">
-                    <div style="text-align:center; padding: 10px; background: #003366; color: white;">Banc d'essai et calibration des mesures 🔍</div>
-                </div>
-                <a class="prev" onclick="plusSlides(-1)" style="position:absolute; top:50%; left:0; cursor:pointer; padding:16px; color:white; font-weight:bold; background: rgba(0,0,0,0.5); text-decoration:none;">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)" style="position:absolute; top:50%; right:0; cursor:pointer; padding:16px; color:white; font-weight:bold; background: rgba(0,0,0,0.5); text-decoration:none;">&#10095;</a>
-            </div>
-        </section>
-
-        <section class="info-card" style="background: #003366; color: white; padding: 25px; border-radius: 12px; margin-bottom: 25px;">
-            <h2 style="color: #c5a059;"><i class="fas fa-award"></i> Bilan 🏆</h2>
-            <p>Ce projet d'envergure a constitué une synthèse complète des compétences du premier semestre. Il m'a permis de mener un projet de A à Z, de la théorie au produit fini fonctionnel et qualifié en conditions réelles. ✅</p>
-        </section>
-
-        <section class="info-card" style="background: #f9f9f9; padding: 25px; border-radius: 12px; border: 1px solid #ddd;">
-            <h3 style="color: #003366;"><i class="fas fa-graduation-cap"></i> Apprentissages critiques : Concevoir 🎓</h3>
-            <p><strong>- AC11.01 | Produire une analyse fonctionnelle d’un système simple :</strong> Analyse du dossier de conception et découpage fonctionnel (multiplexage, étage d'adaptation, calibrage). 📌</p>
-            <p><strong>- AC11.02 | Réaliser un prototype pour des solutions techniques matériel et/ou logiciel :</strong> Routage, soudure des composants et programmation de l'algorithme sous environnement Arduino. 📌</p>
-        </section>
+  <section class="card card--objective reveal">
+    <h2><i class="fas fa-bullseye"></i> Objectif du projet</h2>
+    <p>Concevoir un instrument de mesure numérique autonome capable de relever tensions, courants et résistances, en synthétisant électronique analogique et programmation embarquée dans un outil de diagnostic précis et fonctionnel — le tout dans un délai contraint de trois jours.</p>
+    <div class="comp-block" style="margin-top:16px;">
+      <strong>AC11.02 — Conception et réalisation matérielle</strong>
+      <p>Sélection des composants, routage du circuit imprimé (PCB) et assemblage final par soudure manuelle du prototype.</p>
     </div>
+    <div class="comp-block" style="margin-top:10px;">
+      <strong>AC12.01 — Tests et mise en service</strong>
+      <p>Protocoles de tests systématiques pour vérifier la précision des mesures et valider la conformité du programme embarqué.</p>
+    </div>
+  </section>
 
-    <script>
-        let slideIndex = 1;
-        showSlides(slideIndex);
-        function plusSlides(n) { showSlides(slideIndex += n); }
-        function showSlides(n) {
-            let i;
-            let slides = document.getElementsByClassName("slide");
-            if (n > slides.length) {slideIndex = 1}    
-            if (n < 1) {slideIndex = slides.length}
-            for (i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
-            slides[slideIndex-1].style.display = "block";  
-        }
-    </script>
-    <style>
-        .fade { animation-name: fade; animation-duration: 1.5s; }
-        @keyframes fade { from {opacity: .4} to {opacity: 1} }
-    </style>
+  <section class="card reveal">
+    <h2><i class="fas fa-list-check"></i> Déroulé du projet</h2>
+    <ol class="timeline">
+      <li>
+        <h4>Étude théorique et dimensionnement</h4>
+        <p>Analyse des fonctionnalités requises et modélisation des étages de conditionnement : dimensionnement des ponts diviseurs de tension et des résistances de protection, pour garantir fiabilité des mesures et sécurité du système.</p>
+      </li>
+      <li>
+        <h4>Conception et routage sous KiCad</h4>
+        <p>Saisie du schéma électronique et routage du circuit imprimé, en veillant à la qualité des pistes et à la réduction du bruit de mesure.</p>
+      </li>
+      <li>
+        <h4>Assemblage matériel</h4>
+        <p>Soudure manuelle de l'ensemble des composants, puis validation par tests de continuité électrique et contrôles de mise sous tension avant programmation.</p>
+      </li>
+      <li>
+        <h4>Programmation Arduino C/C++</h4>
+        <p>Système de <code>calibres automatiques</code> pour maximiser la résolution de mesure, interface utilisateur avec voyants LED selon la grandeur mesurée (V / A / Ω), et affichage temps réel sur écran 7 segments à 4 digits multiplexé.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="card reveal">
+    <h2><i class="fas fa-camera"></i> Galerie</h2>
+    <div class="gallery" data-gallery>
+      <div class="gallery__track">
+        <div class="gallery__slide">
+          <img src="images/multi1.png" alt="Vue globale du multimètre terminé">
+          <div class="gallery__caption">Vue globale du multimètre terminé</div>
+        </div>
+        <div class="gallery__slide">
+          <img src="images/multi2.png" alt="Circuit imprimé du multimètre routé sous KiCad">
+          <div class="gallery__caption">Circuit imprimé (PCB) routé</div>
+        </div>
+        <div class="gallery__slide">
+          <img src="images/multi3.png" alt="Banc d'essai et calibration des mesures">
+          <div class="gallery__caption">Banc d'essai et calibration des mesures</div>
+        </div>
+      </div>
+      <button class="gallery__btn gallery__btn--prev" aria-label="Image précédente"><i class="fas fa-chevron-left"></i></button>
+      <button class="gallery__btn gallery__btn--next" aria-label="Image suivante"><i class="fas fa-chevron-right"></i></button>
+      <div class="gallery__dots"></div>
+    </div>
+  </section>
+
+  <section class="card card--dark reveal">
+    <h2><i class="fas fa-award"></i> Bilan</h2>
+    <p>Ce projet d'envergure a constitué une synthèse complète des compétences du premier semestre : mener un projet de A à Z, de la théorie au produit fini fonctionnel et qualifié en conditions réelles.</p>
+  </section>
+
+  <section class="reveal" style="margin-bottom:14px;">
+    <h3 class="section-label"><i class="fas fa-graduation-cap"></i> Apprentissages critiques — Concevoir</h3>
+    <div class="comp-block">
+      <strong>AC11.01 — Produire une analyse fonctionnelle d'un système simple</strong>
+      <p>Analyse du dossier de conception et découpage fonctionnel (multiplexage, étage d'adaptation, calibrage).</p>
+    </div>
+    <div class="comp-block">
+      <strong>AC11.02 — Réaliser un prototype pour des solutions techniques matériel et/ou logiciel</strong>
+      <p>Routage, soudure des composants et programmation de l'algorithme sous environnement Arduino.</p>
+    </div>
+  </section>
+
+  <div class="next-project reveal">
+    <div><span>Projet suivant</span><strong>Robot suiveur de ligne et de mur →</strong></div>
+    <a href="sae-robot.html" class="btn btn--ghost">Voir le projet <i class="fas fa-arrow-right"></i></a>
+  </div>
+
+</main>
+
+<footer>
+  © 2026 Emir Kocaturk — IUT de Troyes, BUT GEII · <a href="mailto:kocaturkemir0@gmail.com">kocaturkemir0@gmail.com</a>
+</footer>
+
+<button class="to-top" aria-label="Retour en haut"><i class="fas fa-arrow-up"></i></button>
+<script src="main.js"></script>
 </body>
 </html>
